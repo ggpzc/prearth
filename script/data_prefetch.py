@@ -60,6 +60,28 @@ target_file_list = {
 }
 
 
+def save_to_json(raw_data,filepath):
+    import json
+    new_data = {
+        "years": [],
+        "keys": [],
+        "data": [],
+    }
+    for key in raw_data.keys():
+        new_data["keys"].append(key)
+        new_data["data"].append([])
+        data = raw_data[key]
+        years = [2000+i for i in range(int(len(data)/2))]
+        miss_cnt = 0
+        for i in range(int(len(data)/2)):
+            if data[2*i]:
+                new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
+            else:
+                miss_cnt += 1
+        new_data["years"] = years[miss_cnt:]
+    with open(filepath,"w") as f:
+        json.dump(new_data,f)
+
 def ipre_fecth(filepath):
     if not os.path.exists(filepath):
         print("{} not exists".format(filepath))
