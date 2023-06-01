@@ -91,7 +91,7 @@ def ipre_fecth(filepath):
         data["race"]["OH"] = [df.iloc[20,6],[df.iloc[24,6],df.iloc[25,6]]]
         data["race"]["NHW"] = [df.iloc[20,7],[df.iloc[24,7],df.iloc[25,7]]]
         data["race"]["NHB"] = [df.iloc[20,8],[df.iloc[24,8],df.iloc[25,8]]]
-        data["race"]["NHS"] = [None]
+        data["race"]["NHS"] = [None,[None,None]]
         data["race"]["OR"] = [df.iloc[20,9],[df.iloc[24,9],df.iloc[25,9]]]
 
 
@@ -177,7 +177,7 @@ def iartypre_fetch_99_07(filepath):
         data_RA["race"]["OH"] = [df.iloc[3*20,6],[df.iloc[3*20+4,6],df.iloc[3*20+5,6]]]
         data_RA["race"]["NHW"] = [df.iloc[3*20,7],[df.iloc[3*20+4,7],df.iloc[3*20+5,7]]]
         data_RA["race"]["NHB"] = [df.iloc[3*20,8],[df.iloc[3*20+4,8],df.iloc[3*20+5,8]]]
-        data_RA["race"]["NHS"] = [None]
+        data_RA["race"]["NHS"] = [None,[None,None]]
         data_RA["race"]["OR"] = [df.iloc[3*20,9],[df.iloc[3*20+4,9],df.iloc[3*20+5,9]]]
 
 
@@ -245,7 +245,7 @@ def iartypre_fetch_99_07(filepath):
         data_OA["race"]["OH"] = [df.iloc[10+3*20,6],[df.iloc[10+3*20+4,6],df.iloc[10+3*20+5,6]]]
         data_OA["race"]["NHW"] = [df.iloc[10+3*20,7],[df.iloc[10+3*20+4,7],df.iloc[10+3*20+5,7]]]
         data_OA["race"]["NHB"] = [df.iloc[10+3*20,8],[df.iloc[10+3*20+4,8],df.iloc[10+3*20+5,8]]]
-        data_OA["race"]["NHS"] = [None]
+        data_OA["race"]["NHS"] = [None,[None,None]]
         data_OA["race"]["OR"] = [df.iloc[10+3*20,9],[df.iloc[10+3*20+4,9],df.iloc[10+3*20+5,9]]]
 
 
@@ -314,7 +314,7 @@ def iartypre_fetch_99_07(filepath):
         data_OT["race"]["OH"] = [df.iloc[20+3*20,6],[df.iloc[20+3*20+4,6],df.iloc[20+3*20+5,6]]]
         data_OT["race"]["NHW"] = [df.iloc[20+3*20,7],[df.iloc[20+3*20+4,7],df.iloc[20+3*20+5,7]]]
         data_OT["race"]["NHB"] = [df.iloc[20+3*20,8],[df.iloc[20+3*20+4,8],df.iloc[20+3*20+5,8]]]
-        data_OT["race"]["NHS"] = [None]
+        data_OT["race"]["NHS"] = [None,[None,None]]
         data_OT["race"]["OR"] = [df.iloc[20+3*20,9],[df.iloc[20+3*20+4,9],df.iloc[20+3*20+5,9]]]
 
 
@@ -402,7 +402,7 @@ def iartypre_fetch_09_19(filepath):
         data_RA["race"]["OH"] = [df.iloc[10+4*20,6],[df.iloc[10+4*20+4,6],df.iloc[10+4*20+5,6]]]
         data_RA["race"]["NHW"] = [df.iloc[10+4*20,7],[df.iloc[10+4*20+4,7],df.iloc[10+4*20+5,7]]]
         data_RA["race"]["NHB"] = [df.iloc[10+4*20,8],[df.iloc[10+4*20+4,8],df.iloc[10+4*20+5,8]]]
-        data_RA["race"]["NHS"] = [None]
+        data_RA["race"]["NHS"] = [None,[None,None]]
         data_RA["race"]["OR"] = [df.iloc[10+4*20,9],[df.iloc[10+4*20+4,9],df.iloc[10+4*20+5,9]]]
 
 
@@ -470,7 +470,7 @@ def iartypre_fetch_09_19(filepath):
         data_OA["race"]["OH"] = [df.iloc[20+4*20,6],[df.iloc[20+4*20+4,6],df.iloc[20+4*20+5,6]]]
         data_OA["race"]["NHW"] = [df.iloc[20+4*20,7],[df.iloc[20+4*20+4,7],df.iloc[20+4*20+5,7]]]
         data_OA["race"]["NHB"] = [df.iloc[20+4*20,8],[df.iloc[20+4*20+4,8],df.iloc[20+4*20+5,8]]]
-        data_OA["race"]["NHS"] = [None]
+        data_OA["race"]["NHS"] = [None,[None,None]]
         data_OA["race"]["OR"] = [df.iloc[20+4*20,9],[df.iloc[20+4*20+4,9],df.iloc[20+4*20+5,9]]]
 
 
@@ -539,7 +539,7 @@ def iartypre_fetch_09_19(filepath):
         data_PA["race"]["OH"] = [df.iloc[30+4*20,6],[df.iloc[30+4*20+4,6],df.iloc[30+4*20+5,6]]]
         data_PA["race"]["NHW"] = [df.iloc[30+4*20,7],[df.iloc[30+4*20+4,7],df.iloc[30+4*20+5,7]]]
         data_PA["race"]["NHB"] = [df.iloc[30+4*20,8],[df.iloc[30+4*20+4,8],df.iloc[30+4*20+5,8]]]
-        data_PA["race"]["NHS"] = [None]
+        data_PA["race"]["NHS"] = [None,[None,None]]
         data_PA["race"]["OR"] = [df.iloc[30+4*20,9],[df.iloc[30+4*20+4,9],df.iloc[30+4*20+5,9]]]
 
 
@@ -607,7 +607,7 @@ def iartypre_fetch_09_19(filepath):
         data_OT["race"]["OH"] = [df.iloc[40+4*20,6],[df.iloc[40+4*20+4,6],df.iloc[40+4*20+5,6]]]
         data_OT["race"]["NHW"] = [df.iloc[40+4*20,7],[df.iloc[40+4*20+4,7],df.iloc[40+4*20+5,7]]]
         data_OT["race"]["NHB"] = [df.iloc[40+4*20,8],[df.iloc[40+4*20+4,8],df.iloc[40+4*20+5,8]]]
-        data_OT["race"]["NHS"] = [None]
+        data_OT["race"]["NHS"] = [None,[None,None]]
         data_OT["race"]["OR"] = [df.iloc[40+4*20,9],[df.iloc[40+4*20+4,9],df.iloc[40+4*20+5,9]]]
 
 
@@ -730,3 +730,46 @@ if __name__ == "__main__":
     #     for key1 in data_iartypre_PA[key].keys():
     #         print(key1,end="  ")
     #         print(data_iartypre_PA[key][key1])
+
+
+    # excel = pd.DataFrame(columns=["","1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
+
+    # for key in data_ipre.keys():
+    #     key_line = [key] + ["" for i in range(11)]
+    #     excel.loc[12] = key_line
+    #     excel.index = excel.index + 1
+
+    #     for key1 in data_ipre[key].keys():
+    #         data_line = [key1] 
+    #         ci_l = [""] 
+    #         ci_h = [""] 
+    #         print(data_ipre[key][key1])
+    #         for i in range(0,len(data_ipre[key][key1]),2):
+    #             if data_ipre[key][key1][i]:
+    #                 data_line.append(data_ipre[key][key1][i])
+    #             else:
+    #                 data_line.append("")
+                
+    #             if data_ipre[key][key1][i+1]:
+    #                 ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 ci_l.append("")
+    #                 ci_h.append("")
+
+
+
+       
+    #         print(data_line)
+    #         excel.loc[12] = data_line
+    #         excel.index = excel.index + 1
+    #         excel.loc[12] = ci_l
+    #         excel.index = excel.index + 1
+    #         excel.loc[12] = ci_h
+    #         excel.index = excel.index + 1
+
+
+
+
+
+    # excel.to_excel("ipre.xlsx",index=False)
