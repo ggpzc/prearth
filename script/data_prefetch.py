@@ -60,27 +60,27 @@ target_file_list = {
 }
 
 
-def save_to_json(raw_data,filepath):
-    import json
-    new_data = {
-        "years": [],
-        "keys": [],
-        "data": [],
-    }
-    for key in raw_data.keys():
-        new_data["keys"].append(key)
-        new_data["data"].append([])
-        data = raw_data[key]
-        years = [2000+i for i in range(int(len(data)/2))]
-        miss_cnt = 0
-        for i in range(int(len(data)/2)):
-            if data[2*i]:
-                new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
-            else:
-                miss_cnt += 1
-        new_data["years"] = years[miss_cnt:]
-    with open(filepath,"w") as f:
-        json.dump(new_data,f)
+# def save_to_json(raw_data,filepath):
+#     import json
+#     new_data = {
+#         "years": [],
+#         "keys": [],
+#         "data": [],
+#     }
+#     for key in raw_data.keys():
+#         new_data["keys"].append(key)
+#         new_data["data"].append([])
+#         data = raw_data[key]
+#         years = [2000+i for i in range(int(len(data)/2))]
+#         miss_cnt = 0
+#         for i in range(int(len(data)/2)):
+#             if data[2*i]:
+#                 new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
+#             else:
+#                 miss_cnt += 1
+#         new_data["years"] = years[miss_cnt:]
+#     with open(filepath,"w") as f:
+#         json.dump(new_data,f)
 
 def ipre_fecth(filepath):
     if not os.path.exists(filepath):
@@ -732,14 +732,14 @@ if __name__ == "__main__":
                     data_iartypre_PA[key][key1] += data_PA[key][key1]       
                     data_iartypre_OT[key][key1] += data_OT[key][key1]
 
-    for key in data_ipre.keys():
-        save_to_json(data_ipre[key],"data_preprocessed/ipre/{}.json".format(key))
+    # for key in data_ipre.keys():
+    #     save_to_json(data_ipre[key],"data_preprocessed/ipre/{}.json".format(key))
 
-    for key in data_ipre.keys():
-        save_to_json(data_iartypre_RA[key],"data_preprocessed/iartypre_RA/{}.json".format(key))
+    # for key in data_ipre.keys():
+    #     save_to_json(data_iartypre_RA[key],"data_preprocessed/iartypre_RA/{}.json".format(key))
 
-    for key in data_ipre.keys():
-        save_to_json(data_iartypre_OA[key],"data_preprocessed/iartypre_OA/{}.json".format(key))
+    # for key in data_ipre.keys():
+    #     save_to_json(data_iartypre_OA[key],"data_preprocessed/iartypre_OA/{}.json".format(key))
     
     # for key in data_ipre.keys():
     #     save_to_json(data_iartypre_PA[key],"data_preprocessed/iartypre_PA/{}.json".format(key))
@@ -763,35 +763,160 @@ if __name__ == "__main__":
 
     #     for key1 in data_ipre[key].keys():
     #         data_line = [key1] 
-    #         ci_l = [""] 
-    #         ci_h = [""] 
+    #         # ci_l = [""] 
+    #         # ci_h = [""] 
     #         print(data_ipre[key][key1])
     #         for i in range(0,len(data_ipre[key][key1]),2):
     #             if data_ipre[key][key1][i]:
-    #                 data_line.append(data_ipre[key][key1][i])
+    #                 data = "{:.2f}".format(data_ipre[key][key1][i]*100)
     #             else:
-    #                 data_line.append("")
-                
-    #             if data_ipre[key][key1][i+1]:
-    #                 ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 ci_l.append("")
-    #                 ci_h.append("")
+    #                 data = ""
+            
 
+    #             if data_ipre[key][key1][i+1][0]:
+    #                 data += "( "
+    #                 data += "{:.2f}".format(data_ipre[key][key1][i+1][0]*100)
+    #                 data += "-"
+    #                 data += "{:.2f}".format(data_ipre[key][key1][i+1][1]*100)
+    #                 data += " )"
+    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 data = ""
+    #                 # ci_l.append("")
+    #                 # ci_h.append("")
+    #             data_line.append(data)
 
 
        
     #         print(data_line)
     #         excel.loc[12] = data_line
     #         excel.index = excel.index + 1
-    #         excel.loc[12] = ci_l
-    #         excel.index = excel.index + 1
-    #         excel.loc[12] = ci_h
-    #         excel.index = excel.index + 1
-
-
-
-
+    #         # excel.loc[12] = ci_l
+    #         # excel.index = excel.index + 1
+    #         # excel.loc[12] = ci_h
+    #         # excel.index = excel.index + 1
 
     # excel.to_excel("ipre.xlsx",index=False)
+
+
+
+    # excel2 = pd.DataFrame(columns=["","","1999-2000", "1999-2000","1999-2000","2001-2002", "2001-2002","2001-2002",
+    #                                "2003-2004", "2003-2004","2003-2004","2005-2006", "2005-2006","2005-2006",
+    #                                "2007-2008", "2007-2008","2007-2008","2009-2010", "2009-2010","2009-2010",
+    #                                "2011-2012", "2011-2012","2011-2012","2013-2014", "2013-2014","2013-2014",
+    #                                "2015-2016", "2015-2016","2015-2016","2017-2018", "2017-2018","2017-2018",
+    #                                "2019-2020","2019-2020","2019-2020"])
+
+    # excel2 = pd.DataFrame(columns=["","", "1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
+
+    # for key in data_ipre.keys():
+    #     key_line = [key] + ["" for i in range(12)]
+    #     excel2.loc[13] = key_line
+    #     excel2.index = excel2.index + 1
+
+    #     for key1 in data_iartypre_RA[key].keys():
+    #         data_line_RA = [key1, "RA"]
+    #         data_line_OA = [key1, "OA"]
+    #         data_line_PA = [key1, "PA"]
+    #         data_line_OT = [key1, "OT"]
+    #         print(data_iartypre_RA[key][key1])
+    #         for i in range(0,len(data_iartypre_RA[key][key1]),2):
+    #             data = ""
+    #             if data_iartypre_RA[key][key1][i]:
+    #                 data = "{:.2f}".format(data_iartypre_RA[key][key1][i]*100)
+    #             else:
+    #                 data = ""
+            
+
+    #             if data_iartypre_RA[key][key1][i+1][0]:
+    #                 data += "( "
+    #                 data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][0]*100)
+    #                 data += "-"
+    #                 data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][1]*100)
+    #                 data += " )"
+    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 data = ""
+    #                 # ci_l.append("")
+    #                 # ci_h.append("")
+    #             data_line_RA.append(data)
+
+
+    #             data = ""
+    #             if data_iartypre_OA[key][key1][i]:
+    #                 data = "{:.2f}".format(data_iartypre_OA[key][key1][i]*100)
+    #             else:
+    #                 data = ""
+            
+
+    #             if data_iartypre_OA[key][key1][i+1][0]:
+    #                 data += "( "
+    #                 data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][0]*100)
+    #                 data += "-"
+    #                 data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][1]*100)
+    #                 data += " )"
+    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 data = ""
+    #                 # ci_l.append("")
+    #                 # ci_h.append("")
+    #             data_line_OA.append(data)
+
+    #             data = ""
+    #             if data_iartypre_PA[key][key1][i]:
+    #                 data = "{:.2f}".format(data_iartypre_PA[key][key1][i]*100)
+    #             else:
+    #                 data = ""
+            
+
+    #             if data_iartypre_PA[key][key1][i+1][0]:
+    #                 data += "( "
+    #                 data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][0]*100)
+    #                 data += "-"
+    #                 data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][1]*100)
+    #                 data += " )"
+    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 data = ""
+    #                 # ci_l.append("")
+    #                 # ci_h.append("")
+    #             data_line_PA.append(data)
+                
+
+    #             data = ""
+    #             if data_iartypre_OT[key][key1][i]:
+    #                 data = "{:.2f}".format(data_iartypre_OT[key][key1][i]*100)
+    #             else:
+    #                 data = ""
+            
+
+    #             if data_iartypre_OT[key][key1][i+1][0]:
+    #                 data += "( "
+    #                 data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][0]*100)
+    #                 data += "-"
+    #                 data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][1]*100)
+    #                 data += " )"
+    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
+    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
+    #             else:
+    #                 data = ""
+    #                 # ci_l.append("")
+    #                 # ci_h.append("")
+    #             data_line_OT.append(data)
+
+
+    #         print(data_line_RA)
+    #         excel2.loc[13] = data_line_RA
+    #         excel2.index = excel2.index + 1
+    #         excel2.loc[13] = data_line_OA
+    #         excel2.index = excel2.index + 1
+    #         excel2.loc[13] = data_line_PA
+    #         excel2.index = excel2.index + 1
+    #         excel2.loc[13] = data_line_OT
+    #         excel2.index = excel2.index + 1
+
+    # excel2.to_excel("iartypre.xlsx",index=False)
