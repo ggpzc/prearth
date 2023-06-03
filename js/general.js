@@ -1,16 +1,8 @@
 // List of mental disorders
 allDisorder = [
-  "Organic Disorders",
-  "Substance Use Disorders",
-  "Schizophrenia",
-  "Mood Disorders",
-  "Neurotic Disorders",
-  "Eating Disorders",
-  "Personality Disorders",
-  "Intellectual Disabilities",
-  "Developmental Disorders",
-  "Behavioral Disorders",
-  "Any Disorder"]
+  "sex",
+  "bmi",
+  "insu"]
 
 // List of the cause of Death
 allCOD = ["Suicide",

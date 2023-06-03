@@ -1,16 +1,16 @@
 
 var chartDom = document.getElementById('lineError');
 var myChart = echarts.init(chartDom);
-var option;
+var option_template;
 
 
 
-var colors = ["#D89C7A", "#849B91", "#8A95A9"]
+var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
 // read data from local position'../data/sex_female.json'
 
 
 
-option = {
+option_template = {
   tooltip: {
     // trigger: 'axis',
   },
@@ -66,15 +66,14 @@ function updateGraph(datapath) {
   fetch(datapath)
   .then(response => response.json())
   .then(json => {
-    // empty option.series
-    option.series = [];
+    // copy option_template to option
+    let option = JSON.parse(JSON.stringify(option_template));
+    let errorData = [];
+    let lineData = [];
+    let dataCount;
+    let lineCount;
 
-    var errorData = [];
-    var lineData = [];
-    var dataCount;
-    var lineCount;
-
-    var raw_data = json;
+    let raw_data = json;
     console.log(raw_data)
     years = raw_data.years;
     keys = raw_data.keys;
@@ -173,18 +172,29 @@ function updateGraph(datapath) {
         })
     }
     console.log("ok")
-    option && myChart.setOption(option);
+    option && myChart.setOption(option,true);
   });
 }
 
 updateGraph("../data/sex.json")
 // sleep for 5 seconds
 
-setTimeout(() => {
-  updateGraph("../data/age.json")
-}, "3000");
+// setTimeout(() => {
+//   updateGraph("../data/age.json")
+// }, "3000");
 
-  
+// setTimeout(() => {
+//   updateGraph("../data/sex.json")
+// }, "3000");
+
+
+
+function ipreSelectChange() {
+  let objS = document.getElementById("ipreselect");
+  let value = objS.options[objS.selectedIndex].value;
+  datapath = "../data/" + value + ".json";
+  updateGraph(datapath);
+}
   
   
 

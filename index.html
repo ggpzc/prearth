@@ -57,6 +57,8 @@
     <script src="LIB/jquery/jquery.min.js"></script>
     <script src="LIB/jquery-easing/jquery.easing.min.js"></script>
 
+
+    <script src="js/lineError.js"></script>
 </head>
 
 <body id="page-top" style="height: 100%;">
@@ -108,18 +110,26 @@
 
 </section>
 
-<section  class="bg-light" style="padding: 30px; margin: 0px">
-  <div class="container">
+<!-- <section  class="bg-light" style="padding: 30px; margin: 0px">
+  <div class="container"> -->
     <!-- Button control On top of the chart -->
-    <div class="row bg-light">
+    <!-- <div class="row bg-light"> -->
       <!-- Choose disorder -->
-      <div class="col-md-4 colWidgetInputLolli" >
+      <!-- <div class="col-md-4 colWidgetInputLolli" >
         <p><select class="persoBtn" id="controlLolliDisorder"></select></p>
       </div>
 
     </div>
   </div>
-</section>
+</section> -->
+
+<select id="ipreselect" onchange="ipreSelectChange()" class="form-select" aria-label="Default select example">
+  <!-- <option selected>Open this select menu</option> -->
+  <option value="sex">sex</option>
+  <option value="bmi">bmi</option>
+  <option value="insu">insu</option>
+</select>
+
 
 <section id="ipre-data" class="bg" style="height: 100%;">
     <div class="container">
@@ -150,7 +160,7 @@
       </div>
   
       <div id="lineError" style=" height: 80%; width: 80%; margin: auto;" ></div>
-      <script src="js/lineError.js"></script>
+      
   
     
   </section>
