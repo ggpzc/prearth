@@ -93,17 +93,45 @@
 
 
 <!-- ======================== IPRE SECTION============================ -->
-<section id="ipre" class="bg" style="height: 100%;">
+
+<section id="ipre" class="bg">
+  <div class="container">
+
+    <!-- Title and first text -->
+    <div class="row">
+      <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+        <h1>ipre</h1>
+        <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+        <br>
+      </div>
+    </div>
+
+</section>
+
+<section  class="bg-light" style="padding: 30px; margin: 0px">
+  <div class="container">
+    <!-- Button control On top of the chart -->
+    <div class="row bg-light">
+      <!-- Choose disorder -->
+      <div class="col-md-4 colWidgetInputLolli" >
+        <p><select class="persoBtn" id="controlLolliDisorder"></select></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="ipre-data" class="bg" style="height: 100%;">
     <div class="container">
   
       <!-- Title and first text -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-12 text-center" style="padding-bottom: 3%">
           <h1>ipre</h1>
           <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
           <br>
         </div>
-      </div>
+      </div> -->
   
       <!-- explanation. Do we keep that?-->
       <!-- <div class="container">
@@ -183,7 +211,9 @@
     <!-- General objects needed -->
     <script src="js/general.js"></script>
 
-
+    <!-- Charts -->
+    <script src="js/lollipop.js"></script>
+    <script src="js/lollipopAll.js"></script>
 
 <!-- ======================================================================= -->
   </body>
