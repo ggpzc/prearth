@@ -2,16 +2,192 @@
 <html lang="en" style="height: 100%;">
 
 <head>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135918098-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135918098-1');
+  </script>
+
+  <meta charset="utf-8">
+  <title>ARTHRITHIS PREVALENCE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A review on mental disorders">
+  <meta name="keywords" content="Mental, Disorders, Schizoprenia">
+  <meta name="author" content="Yan Holtz et al.">
+
+  <!-- Control appearance when share by social media -->
+  <meta property="og:title" content="Mental disorders | a review" />
+  <meta property="og:image" content="img/TODO" />
+  <meta property="og:description" content="Mental disorders | a review" />
+  <meta property='og:url' content="TODO.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="LIB/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="LIB/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- D3.JS -->
+  <script src="js/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="LIB/jquery/jquery.min.js"></script>
+  <script src="LIB/jquery-easing/jquery.easing.min.js"></script>
+  
+    <!-- d3.js annotation -->
+    <script src="js/d3-annotation.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
     <!-- JQUERY -->
     <script src="LIB/jquery/jquery.min.js"></script>
     <script src="LIB/jquery-easing/jquery.easing.min.js"></script>
-</head>
 
+</head>
 
 <body id="page-top" style="height: 100%;">
 
-    <div id="lineError" style=" height: 100%; width: 80%; margin: auto;" ></div>
-    <script src="js/lineError.js"></script>
 
-</body>
+
+
+
+
+
+<!-- =======================  NAVIGATION ======================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#ipre">IPRE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#iartypre">IARTYPRE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- ======================== IPRE SECTION============================ -->
+<section id="ipre" class="bg" style="height: 100%;">
+    <div class="container">
+  
+      <!-- Title and first text -->
+      <div class="row">
+        <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+          <h1>ipre</h1>
+          <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+          <br>
+        </div>
+      </div>
+  
+      <!-- explanation. Do we keep that?-->
+      <!-- <div class="container">
+        <div class="dropdown float-right">
+          <button style="font-size: 12px" class="persoBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Chart explanation
+          </button>
+          <div style="width: 400px; padding: 20px"; class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <p>The left-hand panel shows age across the horizontal axis, while the horizontal axis shows the number of people who have died at different ages scaled to 100,000 persons-years, during the period of observation of our study. Note that the vertical axis is shown in a log scale.</p>
+          </div>
+        </div>
+      </div> -->
+  
+      <!-- Charts GENERAL -->
+  
+      </div>
+  
+      <div id="lineError" style=" height: 80%; width: 80%; margin: auto;" ></div>
+      <script src="js/lineError.js"></script>
+  
+    
+  </section>
+  
+  
+  
+  <!-- ======================== IARTYPRE SECTION============================ -->
+  <section id="iartypre" class="bg-light" style="height: 100%;">
+    <div class="container">
+  
+      <!-- Title and first text -->
+      <div class="row">
+        <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+          <h1>iartypre</h1>
+          <!-- <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;"> -->
+          <hr style="width: 100px; height: 1px; border-color: black">
+          <br>
+        </div>
+      </div>
+  
+      <!-- explanation. Do we keep that?-->
+      <!-- <div class="container">
+        <div class="dropdown float-right">
+          <button style="font-size: 12px" class="persoBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Chart explanation
+          </button>
+          <div style="width: 400px; padding: 20px"; class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <p>The left-hand panel shows age across the horizontal axis, while the horizontal axis shows the number of people who have died at different ages scaled to 100,000 persons-years, during the period of observation of our study. Note that the vertical axis is shown in a log scale.</p>
+          </div>
+        </div>
+      </div> -->
+  
+      <!-- Charts GENERAL -->
+  
+      </div>
+  
+      <div id="lineError" style=" height: 100%; width: 80%; margin: auto;" ></div>
+      <script src="js/lineError.js"></script>
+  
+    
+  </section>
+  
+
+
+
+
+
+
+
+<!-- ======================== JAVASCRIPT SECTION =========================== -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="LIB/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- General objects needed -->
+    <script src="js/general.js"></script>
+
+
+
+<!-- ======================================================================= -->
+  </body>
+
+
+
+</html>
