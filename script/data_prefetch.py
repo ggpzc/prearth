@@ -119,7 +119,7 @@ def ipre_fecth(filepath):
 
     data["edu"] = {}
     data["edu"]["<high school"] = [df.iloc[30,3],[df.iloc[34,3],df.iloc[35,3]]]
-    data["edu"]["high school graduate and some college"] = [df.iloc[34,4],[df.iloc[30,4],df.iloc[35,4]]]
+    data["edu"]["high school graduate and some college"] = [df.iloc[34,4],[df.iloc[34,4],df.iloc[35,4]]]
     data["edu"]["college graduate"] = [df.iloc[30,5],[df.iloc[34,5],df.iloc[35,5]]]
 
     data["bmi"] = {}
@@ -205,7 +205,7 @@ def iartypre_fetch_99_07(filepath):
 
     data_RA["edu"] = {}
     data_RA["edu"]["<high school"] = [df.iloc[3*30,3],[df.iloc[3*30+4,3],df.iloc[3*30+5,3]]]
-    data_RA["edu"]["high school graduate and some college"] = [df.iloc[3*30+4,4],[df.iloc[3*30,4],df.iloc[3*30+5,4]]]
+    data_RA["edu"]["high school graduate and some college"] = [df.iloc[3*30,4],[df.iloc[3*30+4,4],df.iloc[3*30+5,4]]]
     data_RA["edu"]["college graduate"] = [df.iloc[3*30,5],[df.iloc[3*30+4,5],df.iloc[3*30+5,5]]]
 
     data_RA["bmi"] = {}
