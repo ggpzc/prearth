@@ -4,13 +4,10 @@ var myChart = echarts.init(chartDom);
 var option;
 
 
-var categoryData = [];
-var errorData = [];
-var lineData = [];
-var dataCount = 20;
-var lineCount = 3;
+
 var colors = ["#D89C7A", "#849B91", "#8A95A9"]
 // read data from local position'../data/sex_female.json'
+
 
 
 option = {
@@ -62,9 +59,21 @@ option = {
 
 // import raw_data from '../data/sex_male.json';
 
-fetch("../data/sex.json")
+
+
+
+function updateGraph(datapath) {
+  fetch(datapath)
   .then(response => response.json())
   .then(json => {
+    // empty option.series
+    option.series = [];
+
+    var errorData = [];
+    var lineData = [];
+    var dataCount;
+    var lineCount;
+
     var raw_data = json;
     console.log(raw_data)
     years = raw_data.years;
@@ -166,15 +175,18 @@ fetch("../data/sex.json")
     console.log("ok")
     option && myChart.setOption(option);
   });
+}
 
+updateGraph("../data/sex.json")
+// sleep for 5 seconds
 
-
+setTimeout(() => {
+  updateGraph("../data/age.json")
+}, "3000");
 
   
   
   
-  
-
 
 // for (var i = 0; i < dataCount; i++) {
 //   categoryData.push('category' + i);
