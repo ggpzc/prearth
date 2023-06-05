@@ -32,13 +32,13 @@ option_ipre_template = {
   dataZoom: [
     {
       type: 'slider',
-      start: 50,
-      end: 70
+      start: 0,
+      end: 100
     },
     {
       type: 'inside',
-      start: 50,
-      end: 70
+      start: 0,
+      end: 100
     }
   ],
   xAxis: {
