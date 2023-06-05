@@ -198,7 +198,12 @@ function ipreSelectChange() {
   updateIpreGraph(datapath);
 }
   
-  
+window.onresize = function () {
+  setTimeout(function () {
+    myChart_ipre.resize();
+    myChart_arty.resize();s
+  }, 10);
+};
 
 // for (var i = 0; i < dataCount; i++) {
 //   categoryData.push('category' + i);
