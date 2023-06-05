@@ -5,7 +5,7 @@ path_to_datadir = "data/"
 
 
 
-def save_to_json(raw_data,filepath):
+def save_to_json_ipre(raw_data,filepath):
     import json
     new_data = {
         "years": [],
@@ -16,12 +16,38 @@ def save_to_json(raw_data,filepath):
         new_data["keys"].append(key)
         new_data["data"].append([])
         data = raw_data[key]
-        print(data)
+        # print(data)
         years = ["{}-{}".format(1999+i*2,2000+i*2) for i in range(int(len(data)/2))]
         miss_cnt = 0
         for i in range(int(len(data)/2)):
             if data[2*i]:
                 new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
+                # new_data["data"][-1].append(["{:.2f}".format(data[2*i]*100), ":.2f".format(data[2*i+1][0]*100), "{:.2f}".format(data[2*i+1][1]*100)])
+            else:
+                miss_cnt += 1
+        new_data["years"] = years[miss_cnt:]
+    with open(filepath,"w") as f:
+        json.dump(new_data,f)
+
+def save_to_json_iartypre(raw_data,filepath):
+    import json
+    new_data = {
+        "years": [],
+        "keys": [],
+        "data": [],
+    }
+    for key in raw_data.keys():
+        new_data["keys"].append(key)
+        new_data["data"].append([])
+        data = raw_data[key]
+        # print(data)
+        years = ["{}-{}".format(1999+i*2,2000+i*2) for i in range(int(len(data)/4))]
+        miss_cnt = 0
+        for i in range(int(len(data)/4)):
+            if data[4*i]:
+                new_data["data"][-1].append([data[4*i], data[4*i+1][0], data[4*i+1][1], data[4*i+2],data[4*i+3][0],data[4*i+3][1]])
+                # new_data["data"][-1].append(["{:.2f}".format(data[4*i]*100), "{:.2f}".format(data[4*i+1][0]*100), "{:.2f}".format(data[4*i+1][1]*100), 
+                #                              "{:.2f}".format(data[4*i+2]*100),"{:.2f}".format(data[4*i+3][0]*100),"{:.2f}".format(data[4*i+3][1]*100)])
             else:
                 miss_cnt += 1
         new_data["years"] = years[miss_cnt:]
@@ -732,20 +758,22 @@ if __name__ == "__main__":
                     data_iartypre_PA[key][key1] += data_PA[key][key1]       
                     data_iartypre_OT[key][key1] += data_OT[key][key1]
 
-    # for key in data_ipre.keys():
-    #     save_to_json(data_ipre[key],"data_preprocessed/ipre/{}.json".format(key))
+    for key in data_ipre.keys():
+        save_to_json_ipre(data_ipre[key],"data_preprocessed/ipre/{}.json".format(key))
 
-    # for key in data_ipre.keys():
-    #     save_to_json(data_iartypre_RA[key],"data_preprocessed/iartypre_RA/{}.json".format(key))
-
-    # for key in data_ipre.keys():
-    #     save_to_json(data_iartypre_OA[key],"data_preprocessed/iartypre_OA/{}.json".format(key))
-    
-    # for key in data_ipre.keys():
-    #     save_to_json(data_iartypre_PA[key],"data_preprocessed/iartypre_PA/{}.json".format(key))
-
-    # for key in data_ipre.keys():
-    #     save_to_json(data_iartypre_OT[key],"data_preprocessed/iartypre_OT/{}.json".format(key))
+    for key in data_iartypre_RA.keys():
+        tmp_dict = {}
+        for key1 in data_iartypre_RA[key]:
+            tmp_dict[key1] = []
+            for i in range(0,len(data_iartypre_RA[key][key1]),2):
+                tmp_dict[key1].append(data_iartypre_RA[key][key1][i])
+                tmp_dict[key1].append(data_iartypre_RA[key][key1][i+1])
+                tmp_dict[key1].append(data_iartypre_OA[key][key1][i])
+                tmp_dict[key1].append(data_iartypre_OA[key][key1][i+1])
+            if key1 == "NHS":
+                print(tmp_dict)
+        # print(tmp_dict)
+        save_to_json_iartypre(tmp_dict,"data_preprocessed/iartypre/{}.json".format(key))
 
     # for key in data_iartypre_PA.keys():
     #     print(key)

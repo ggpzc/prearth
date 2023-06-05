@@ -5,7 +5,7 @@ var option_arty_template;
 
 
 
-var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
+var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D","#8A95A9"]
 // read data from local position'../data/sex_female.json'
 
 
@@ -68,8 +68,10 @@ function updateArtyGraph(datapath) {
   .then(json => {
     // copy option_template to option
     let option = JSON.parse(JSON.stringify(option_arty_template));
-    let errorData = [];
-    let lineData = [];
+    let errorData_RA = [];
+    let lineData_RA = [];
+    let errorData_OA = [];
+    let lineData_OA = [];
     let dataCount;
     let lineCount;
 
@@ -83,32 +85,50 @@ function updateArtyGraph(datapath) {
     lineCount = years.length;
     for(var i = 0; i < dataCount; i++)
     {
-      option.legend.data.push(keys[i]);
-      option.legend.data.push("error-"+keys[i]);
-      lineData.push([]);
-      errorData.push([]);
-      for(var j = 0; j < lineCount; j++)
+      option.legend.data.push(keys[i]+'-RA');
+      option.legend.data.push("error-"+keys[i]+'-RA');
+      option.legend.data.push(keys[i]+'-OA');
+      option.legend.data.push("error-"+keys[i]+'-OA');
+      lineData_RA.push([]);
+      errorData_RA.push([]);
+      lineData_OA.push([]);
+      errorData_OA.push([]);
+      keyLen = data[i].length
+      for(var j = 0; j < keyLen; j++)
       {
-        lineData[i].push(data[i][j][0]);
-        errorData[i].push([j, data[i][j][1], data[i][j][2], data[i][j][0]]);
+        lineData_RA[i].push([j+lineCount-keyLen,data[i][j][0]]);
+        errorData_RA[i].push([j+lineCount-keyLen, data[i][j][1], data[i][j][2], data[i][j][0]]);
+        lineData_OA[i].push([j+lineCount-keyLen,data[i][j][3]]);
+        errorData_OA[i].push([j+lineCount-keyLen, data[i][j][4], data[i][j][5], data[i][j][3]]);
       }
     }
-    console.log(lineData);
-    console.log(errorData);
+    console.log(lineData_RA);
+    console.log(errorData_RA);
+    console.log(lineData_OA);
+    console.log(errorData_OA);
     for (var i = 0; i < dataCount; i++)
     {
       option.series.push({
           type: 'line',
-          name: keys[i],
+          name: keys[i]+'-RA',
           smooth: true,
-          data: lineData[i],
+          data: lineData_RA[i],
           itemStyle: {
             color: colors[i]
           }
         });
       option.series.push({
+          type: 'line',
+          name: keys[i]+'-OA',
+          smooth: true,
+          data: lineData_OA[i],
+          itemStyle: {
+            color: colors[i+1]
+          }
+        });
+      option.series.push({
           type: 'custom',
-          name: 'error-'+keys[i],
+          name: 'error-'+keys[i]+'-RA',
           itemStyle: {
             borderWidth: 1.5,
             color: colors[i],
@@ -167,7 +187,71 @@ function updateArtyGraph(datapath) {
             tooltip: [3,1,2],
           },
           dimensions: ["year", "low","high","avg"],
-          data: errorData[i],
+          data: errorData_RA[i],
+          z: 100
+        })
+      option.series.push({
+          type: 'custom',
+          name: 'error-'+keys[i]+'-OA',
+          itemStyle: {
+            borderWidth: 1.5,
+            color: colors[i+1],
+          },
+          renderItem: function (params, api) {
+            var xValue = api.value(0);
+            var highPoint = api.coord([xValue, api.value(1)]);
+            var lowPoint = api.coord([xValue, api.value(2)]);
+            var halfWidth = api.size([1, 0])[0] * 0.1;
+            var style = api.style({
+              stroke: api.visual('color'),
+              fill: undefined
+            });
+            return {
+              type: 'group',
+              children: [
+                {
+                  type: 'line',
+                  transition: ['shape'],
+                  shape: {
+                    x1: highPoint[0] - halfWidth,
+                    y1: highPoint[1],
+                    x2: highPoint[0] + halfWidth,
+                    y2: highPoint[1]
+                  },
+                  style: style
+                },
+                {
+                  type: 'line',
+                  transition: ['shape'],
+                  shape: {
+                    x1: highPoint[0],
+                    y1: highPoint[1],
+                    x2: lowPoint[0],
+                    y2: lowPoint[1]
+                  },
+                  style: style
+                },
+                {
+                  type: 'line',
+                  transition: ['shape'],
+                  shape: {
+                    x1: lowPoint[0] - halfWidth,
+                    y1: lowPoint[1],
+                    x2: lowPoint[0] + halfWidth,
+                    y2: lowPoint[1]
+                  },
+                  style: style
+                }
+              ]
+            };
+          },
+          encode: {
+            x: 0,
+            y: [1, 2],
+            tooltip: [3,1,2],
+          },
+          dimensions: ["year", "low","high","avg"],
+          data: errorData_OA[i],
           z: 100
         })
     }
@@ -176,7 +260,7 @@ function updateArtyGraph(datapath) {
   });
 }
 
-updateArtyGraph("../data/sex.json")
+updateArtyGraph("../data_preprocessed/iartypre/overall.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -192,7 +276,7 @@ updateArtyGraph("../data/sex.json")
 function artySelectChange() {
   let objS = document.getElementById("ipreselect-arty");
   let value = objS.options[objS.selectedIndex].value;
-  datapath = "../data/" + value + ".json";
+  datapath = "../data_preprocessed/iartypre/" + value + ".json";
   updateArtyGraph(datapath);
 }
   

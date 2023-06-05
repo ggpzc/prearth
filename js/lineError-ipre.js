@@ -87,10 +87,11 @@ function updateIpreGraph(datapath) {
       option.legend.data.push("error-"+keys[i]);
       lineData.push([]);
       errorData.push([]);
-      for(var j = 0; j < lineCount; j++)
+      keyLen = data[i].length
+      for(var j = 0; j < keyLen; j++)
       {
-        lineData[i].push(data[i][j][0]);
-        errorData[i].push([j, data[i][j][1], data[i][j][2], data[i][j][0]]);
+        lineData[i].push([j+lineCount-keyLen,data[i][j][0]]);
+        errorData[i].push([j+lineCount-keyLen, data[i][j][1], data[i][j][2], data[i][j][0]]);
       }
     }
     console.log(lineData);
@@ -176,7 +177,7 @@ function updateIpreGraph(datapath) {
   });
 }
 
-updateIpreGraph("../data/age.json")
+updateIpreGraph("../data_preprocessed/ipre/overall.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -193,7 +194,7 @@ function ipreSelectChange() {
   let objS = document.getElementById("ipreselect");
   let value = objS.options[objS.selectedIndex].value;
   console.log(value)
-  datapath = "../data/" + value + ".json";
+  datapath = "../data_preprocessed/ipre/" + value + ".json";
   updateIpreGraph(datapath);
 }
   
