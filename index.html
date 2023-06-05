@@ -58,8 +58,7 @@
     <script src="LIB/jquery-easing/jquery.easing.min.js"></script>
 
 
-    <script src="js/lineError.js"></script>
-    <script src="js/lineError-arty.js"></script>
+
 </head>
 
 <body id="page-top" style="height: 100%;">
@@ -160,8 +159,7 @@
   
       </div>
   
-      <div id="lineError" style=" height: 80%; width: 80%; margin: auto;" ></div>
-      <script src="js/lineError.js"></script>
+      <div id="lineError-ipre" style=" height: 80%; width: 80%; margin: auto;" ></div>
   
     
   </section>
@@ -189,7 +187,7 @@
       <div class="row bg-light">
         <!-- Choose disorder -->
         <div class="col-md-4 colWidgetInputLolli" >
-          <select id="ipreselect-arty" onchange="ipreSelectChange_arty()" class="persoBtn" aria-label="Default select example">
+          <select id="ipreselect-arty" onchange="artySelectChange()" class="persoBtn" aria-label="Default select example">
             <!-- <option selected>Open this select menu</option> -->
             <option value="sex">sex</option>
             <option value="bmi">bmi</option>
@@ -233,7 +231,6 @@
         </div>
     
         <div id="lineError-arty" style=" height: 80%; width: 80%; margin: auto;" ></div>
-        <script src="js/lineError-arty.js"></script>
     
       
     </section>
@@ -257,6 +254,10 @@
     <!-- Charts -->
     <script src="js/lollipop.js"></script>
     <script src="js/lollipopAll.js"></script>
+
+    <!-- Graph -->
+    <script src="js/lineError-ipre.js"></script>
+    <script src="js/lineError-arty.js"></script>
 
 <!-- ======================================================================= -->
   </body>

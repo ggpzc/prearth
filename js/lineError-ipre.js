@@ -1,7 +1,7 @@
 
-var chartDom = document.getElementById('lineError');
-var myChart = echarts.init(chartDom);
-var option_template;
+var chartDom_ipre = document.getElementById('lineError-ipre');
+var myChart_ipre = echarts.init(chartDom_ipre);
+var option_ipre_template;
 
 
 
@@ -10,7 +10,7 @@ var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
 
 
 
-option_template = {
+option_ipre_template = {
   tooltip: {
     // trigger: 'axis',
   },
@@ -62,12 +62,12 @@ option_template = {
 
 
 
-function updateGraph(datapath) {
+function updateIpreGraph(datapath) {
   fetch(datapath)
   .then(response => response.json())
   .then(json => {
     // copy option_template to option
-    let option = JSON.parse(JSON.stringify(option_template));
+    let option = JSON.parse(JSON.stringify(option_ipre_template));
     let errorData = [];
     let lineData = [];
     let dataCount;
@@ -172,11 +172,11 @@ function updateGraph(datapath) {
         })
     }
     console.log("ok")
-    option && myChart.setOption(option,true);
+    option && myChart_ipre.setOption(option,true);
   });
 }
 
-updateGraph("../data/sex.json")
+updateIpreGraph("../data/age.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -192,8 +192,9 @@ updateGraph("../data/sex.json")
 function ipreSelectChange() {
   let objS = document.getElementById("ipreselect");
   let value = objS.options[objS.selectedIndex].value;
+  console.log(value)
   datapath = "../data/" + value + ".json";
-  updateGraph(datapath);
+  updateIpreGraph(datapath);
 }
   
   
