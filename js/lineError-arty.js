@@ -1,5 +1,5 @@
 
-var chartDom = document.getElementById('lineError');
+var chartDom = document.getElementById('lineError-arty');
 var myChart = echarts.init(chartDom);
 var option_template;
 
@@ -189,8 +189,8 @@ updateGraph("../data/sex.json")
 
 
 
-function ipreSelectChange() {
-  let objS = document.getElementById("ipreselect");
+function ipreSelectChange_arty() {
+  let objS = document.getElementById("ipreselect-arty");
   let value = objS.options[objS.selectedIndex].value;
   datapath = "../data/" + value + ".json";
   updateGraph(datapath);
