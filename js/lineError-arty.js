@@ -260,7 +260,7 @@ function updateArtyGraph(datapath) {
   });
 }
 
-updateArtyGraph("../data_preprocessed/iartypre/overall.json")
+updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -276,7 +276,7 @@ updateArtyGraph("../data_preprocessed/iartypre/overall.json")
 function artySelectChange() {
   let objS = document.getElementById("ipreselect-arty");
   let value = objS.options[objS.selectedIndex].value;
-  datapath = "../data_preprocessed/iartypre/" + value + ".json";
+  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
   updateArtyGraph(datapath);
 }
   

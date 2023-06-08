@@ -177,7 +177,7 @@ function updateIpreGraph(datapath) {
   });
 }
 
-updateIpreGraph("../data_preprocessed/ipre/overall.json")
+updateIpreGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -194,14 +194,14 @@ function ipreSelectChange() {
   let objS = document.getElementById("ipreselect");
   let value = objS.options[objS.selectedIndex].value;
   console.log(value)
-  datapath = "../data_preprocessed/ipre/" + value + ".json";
+  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/" + value + ".json";
   updateIpreGraph(datapath);
 }
   
 window.onresize = function () {
   setTimeout(function () {
     myChart_ipre.resize();
-    myChart_arty.resize();s
+    myChart_arty.resize();
   }, 10);
 };
 
