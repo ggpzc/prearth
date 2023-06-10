@@ -25,8 +25,9 @@ option_ipre_template = {
     
   },
   legend: {
-    orient: 'vertical',
-    left: 'right',
+    // orient: 'vertical',
+    // left: 'right',
+    align: 'left',
     data: []
   },
   dataZoom: [
