@@ -21,8 +21,8 @@ def save_to_json_ipre(raw_data,filepath):
         miss_cnt = 0
         for i in range(int(len(data)/2)):
             if data[2*i]:
-                new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
-                # new_data["data"][-1].append(["{:.2f}".format(data[2*i]*100), ":.2f".format(data[2*i+1][0]*100), "{:.2f}".format(data[2*i+1][1]*100)])
+                # new_data["data"][-1].append([data[2*i], data[2*i+1][0], data[2*i+1][1]])
+                new_data["data"][-1].append(["{:.2f}".format(data[2*i]*100), "{:.2f}".format(max(0,data[2*i+1][0]*100)), "{:.2f}".format(data[2*i+1][1]*100)])
             else:
                 miss_cnt += 1
         new_data["years"] = years[miss_cnt:]
@@ -45,9 +45,9 @@ def save_to_json_iartypre(raw_data,filepath):
         miss_cnt = 0
         for i in range(int(len(data)/4)):
             if data[4*i]:
-                new_data["data"][-1].append([data[4*i], data[4*i+1][0], data[4*i+1][1], data[4*i+2],data[4*i+3][0],data[4*i+3][1]])
-                # new_data["data"][-1].append(["{:.2f}".format(data[4*i]*100), "{:.2f}".format(data[4*i+1][0]*100), "{:.2f}".format(data[4*i+1][1]*100), 
-                #                              "{:.2f}".format(data[4*i+2]*100),"{:.2f}".format(data[4*i+3][0]*100),"{:.2f}".format(data[4*i+3][1]*100)])
+                # new_data["data"][-1].append([data[4*i], data[4*i+1][0], data[4*i+1][1], data[4*i+2],data[4*i+3][0],data[4*i+3][1]])
+                new_data["data"][-1].append(["{:.2f}".format(data[4*i]*100), "{:.2f}".format(max(0,data[4*i+1][0]*100)), "{:.2f}".format(data[4*i+1][1]*100), 
+                                             "{:.2f}".format(data[4*i+2]*100),"{:.2f}".format(max(0,data[4*i+3][0]*100)),"{:.2f}".format(data[4*i+3][1]*100)])
             else:
                 miss_cnt += 1
         new_data["years"] = years[miss_cnt:]
@@ -145,7 +145,7 @@ def ipre_fecth(filepath):
 
     data["edu"] = {}
     data["edu"]["<high school"] = [df.iloc[30,3],[df.iloc[34,3],df.iloc[35,3]]]
-    data["edu"]["high school graduate and some college"] = [df.iloc[34,4],[df.iloc[34,4],df.iloc[35,4]]]
+    data["edu"]["high school graduate and some college"] = [df.iloc[30,4],[df.iloc[34,4],df.iloc[35,4]]]
     data["edu"]["college graduate"] = [df.iloc[30,5],[df.iloc[34,5],df.iloc[35,5]]]
 
     data["bmi"] = {}
@@ -299,7 +299,7 @@ def iartypre_fetch_99_07(filepath):
 
     data_OA["edu"] = {}
     data_OA["edu"]["<high school"] = [df.iloc[10+3*30,3],[df.iloc[10+3*30+4,3],df.iloc[10+3*30+5,3]]]
-    data_OA["edu"]["high school graduate and some college"] = [df.iloc[10+3*30+4,4],[df.iloc[10+3*30,4],df.iloc[10+3*30+5,4]]]
+    data_OA["edu"]["high school graduate and some college"] = [df.iloc[10+3*30,4],[df.iloc[10+3*30+4,4],df.iloc[10+3*30+5,4]]]
     data_OA["edu"]["college graduate"] = [df.iloc[10+3*30,5],[df.iloc[10+3*30+4,5],df.iloc[10+3*30+5,5]]]
 
     data_OA["bmi"] = {}
@@ -368,7 +368,7 @@ def iartypre_fetch_99_07(filepath):
 
     data_OT["edu"] = {}
     data_OT["edu"]["<high school"] = [df.iloc[20+3*30,3],[df.iloc[20+3*30+4,3],df.iloc[20+3*30+5,3]]]
-    data_OT["edu"]["high school graduate and some college"] = [df.iloc[20+3*30+4,4],[df.iloc[20+3*30,4],df.iloc[20+3*30+5,4]]]
+    data_OT["edu"]["high school graduate and some college"] = [df.iloc[20+3*30,4],[df.iloc[20+3*30+4,4],df.iloc[20+3*30+5,4]]]
     data_OT["edu"]["college graduate"] = [df.iloc[20+3*30,5],[df.iloc[20+3*30+4,5],df.iloc[20+3*30+5,5]]]
 
     data_OT["bmi"] = {}
@@ -456,7 +456,7 @@ def iartypre_fetch_09_19(filepath):
 
     data_RA["edu"] = {}
     data_RA["edu"]["<high school"] = [df.iloc[10+4*30,3],[df.iloc[10+4*30+4,3],df.iloc[10+4*30+5,3]]]
-    data_RA["edu"]["high school graduate and some college"] = [df.iloc[10+4*30+4,4],[df.iloc[10+4*30,4],df.iloc[10+4*30+5,4]]]
+    data_RA["edu"]["high school graduate and some college"] = [df.iloc[10+4*30,4],[df.iloc[10+4*30+4,4],df.iloc[10+4*30+5,4]]]
     data_RA["edu"]["college graduate"] = [df.iloc[10+4*30,5],[df.iloc[10+4*30+4,5],df.iloc[10+4*30+5,5]]]
 
     data_RA["bmi"] = {}
@@ -524,7 +524,7 @@ def iartypre_fetch_09_19(filepath):
 
     data_OA["edu"] = {}
     data_OA["edu"]["<high school"] = [df.iloc[20+4*30,3],[df.iloc[20+4*30+4,3],df.iloc[20+4*30+5,3]]]
-    data_OA["edu"]["high school graduate and some college"] = [df.iloc[20+4*30+4,4],[df.iloc[20+4*30,4],df.iloc[20+4*30+5,4]]]
+    data_OA["edu"]["high school graduate and some college"] = [df.iloc[20+4*30,4],[df.iloc[20+4*30+4,4],df.iloc[20+4*30+5,4]]]
     data_OA["edu"]["college graduate"] = [df.iloc[20+4*30,5],[df.iloc[20+4*30+4,5],df.iloc[20+4*30+5,5]]]
 
     data_OA["bmi"] = {}
@@ -593,7 +593,7 @@ def iartypre_fetch_09_19(filepath):
 
     data_PA["edu"] = {}
     data_PA["edu"]["<high school"] = [df.iloc[30+4*30,3],[df.iloc[30+4*30+4,3],df.iloc[30+4*30+5,3]]]
-    data_PA["edu"]["high school graduate and some college"] = [df.iloc[30+4*30+4,4],[df.iloc[30+4*30,4],df.iloc[30+4*30+5,4]]]
+    data_PA["edu"]["high school graduate and some college"] = [df.iloc[30+4*30,4],[df.iloc[30+4*30+4,4],df.iloc[30+4*30+5,4]]]
     data_PA["edu"]["college graduate"] = [df.iloc[30+4*30,5],[df.iloc[30+4*30+4,5],df.iloc[30+4*30+5,5]]]
 
     data_PA["bmi"] = {}
@@ -661,7 +661,7 @@ def iartypre_fetch_09_19(filepath):
 
     data_OT["edu"] = {}
     data_OT["edu"]["<high school"] = [df.iloc[40+4*30,3],[df.iloc[40+4*30+4,3],df.iloc[40+4*30+5,3]]]
-    data_OT["edu"]["high school graduate and some college"] = [df.iloc[40+4*30+4,4],[df.iloc[40+4*30,4],df.iloc[40+4*30+5,4]]]
+    data_OT["edu"]["high school graduate and some college"] = [df.iloc[40+4*30,4],[df.iloc[40+4*30+4,4],df.iloc[40+4*30+5,4]]]
     data_OT["edu"]["college graduate"] = [df.iloc[40+4*30,5],[df.iloc[40+4*30+4,5],df.iloc[40+4*30+5,5]]]
 
     data_OT["bmi"] = {}
