@@ -267,7 +267,7 @@ function updateArtyGraph(datapath) {
 
 
 
-updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.json")
+updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.overall.json")
 // updateArtyGraph("../data_preprocessed/iartypre/overall.overall.json")
 // sleep for 5 seconds
 
