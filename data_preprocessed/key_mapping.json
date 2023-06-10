@@ -52,7 +52,7 @@
     "smok" : {
         "smok-yes"      : "smok.smok-yes",
         "smok-no"       : "smok.smok-no",
-        "smok-unknown"  : "smok.smok_unknown"
+        "smok-unknown"  : "smok.smok-unknown"
     },
 
     "phys" : {

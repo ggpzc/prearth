@@ -279,7 +279,7 @@ updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iar
 
 
 
-fetch("../data_preprocessed/key_mapping.json")
+fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
   .then(response => response.json())
   .then(json => {
     // copy option_template to option
