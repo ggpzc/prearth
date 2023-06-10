@@ -4,7 +4,7 @@ var myChart_arty = echarts.init(chartDom_arty);
 var option_arty_template;
 
 
-
+var arty_sub_map;
 var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D","#8A95A9"]
 // read data from local position'../data/sex_female.json'
 
@@ -260,6 +260,12 @@ function updateArtyGraph(datapath) {
   });
 }
 
+
+
+
+
+
+
 updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.json")
 // sleep for 5 seconds
 
@@ -273,13 +279,56 @@ updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iar
 
 
 
+fetch("../data_preprocessed/key_mapping.json")
+  .then(response => response.json())
+  .then(json => {
+    // copy option_template to option
+    arty_sub_map = json;
+    console.log(arty_sub_map);
+  });
+
+
+
+
+
+function changeSubSelect(key) {
+  let objSub = document.getElementById("ipreselect-arty-sub");
+  let oOp = objSub.children;
+  // remove all option
+  objSub.innerHTML = "";
+  // for(let i = 0; i < oOp.length; i++) {
+  //   objSub.removeChild(oOp[i]);
+  // }
+
+  let subkeys = Object.keys(arty_sub_map[key]);
+  console.log(subkeys);
+  for (let i = 0; i < subkeys.length; i++) {
+    objSub.innerHTML += "<option value=\"" + subkeys[i] + "\">" + subkeys[i] + "</option>";
+  }
+
+}
+
 function artySelectChange() {
   let objS = document.getElementById("ipreselect-arty");
-  let value = objS.options[objS.selectedIndex].value;
+  let key = objS.options[objS.selectedIndex].value;
+  changeSubSelect(key);
+  // datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
+  // updateArtyGraph(datapath);
+}
+
+function artySubSelectChange() {
+  let objSub = document.getElementById("ipreselect-arty-sub");
+  let objS = document.getElementById("ipreselect-arty");
+
+  let key = objS.options[objS.selectedIndex].value;
+  let subkey = objSub.options[objSub.selectedIndex].value;
+
+  value = arty_sub_map[key][subkey]
   datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
   updateArtyGraph(datapath);
 }
   
+
   
 
 // for (var i = 0; i < dataCount; i++) {

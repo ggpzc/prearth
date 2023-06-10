@@ -177,7 +177,9 @@ function updateIpreGraph(datapath) {
   });
 }
 
-updateIpreGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+// updateIpreGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+updateIpreGraph("../data_preprocessed/ipre/age.json")
+
 // sleep for 5 seconds
 
 // setTimeout(() => {
