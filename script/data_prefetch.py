@@ -122,7 +122,7 @@ def ipre_fecth(filepath):
     data["age"] = {}
     data["age"]["18-44yrs"] = [df.iloc[10,3],[df.iloc[14,3],df.iloc[15,3]]]
     data["age"]["44-65yrs"] = [df.iloc[10,4],[df.iloc[14,4],df.iloc[15,4]]]
-    data["age"][">65yrs"] = [df.iloc[10,5],[df.iloc[14,5],df.iloc[15,5]]]
+    data["age"]["older_than_65yrs"] = [df.iloc[10,5],[df.iloc[14,5],df.iloc[15,5]]]
 
     data["race"] = {}
     
@@ -144,9 +144,9 @@ def ipre_fecth(filepath):
 
 
     data["edu"] = {}
-    data["edu"]["<high school"] = [df.iloc[30,3],[df.iloc[34,3],df.iloc[35,3]]]
-    data["edu"]["high school graduate and some college"] = [df.iloc[30,4],[df.iloc[34,4],df.iloc[35,4]]]
-    data["edu"]["college graduate"] = [df.iloc[30,5],[df.iloc[34,5],df.iloc[35,5]]]
+    data["edu"]["under_high_school"] = [df.iloc[30,3],[df.iloc[34,3],df.iloc[35,3]]]
+    data["edu"]["high_school_graduate_and_some_college"] = [df.iloc[30,4],[df.iloc[34,4],df.iloc[35,4]]]
+    data["edu"]["college_graduate"] = [df.iloc[30,5],[df.iloc[34,5],df.iloc[35,5]]]
 
     data["bmi"] = {}
     # data["bmi"]["bmi<18.5"] = [df.iloc[40,6],[df.iloc[44,6],df.iloc[45,6]]]
@@ -154,7 +154,7 @@ def ipre_fecth(filepath):
     data["bmi"]["bmi25.0-30.0"] = [df.iloc[40,8],[df.iloc[44,8],df.iloc[45,8]]]
     data["bmi"]["bmi30.0-35.0"] = [df.iloc[40,9],[df.iloc[44,9],df.iloc[45,9]]]
     data["bmi"]["bmi35.0-40.0"] = [df.iloc[40,10],[df.iloc[44,10],df.iloc[45,10]]]
-    data["bmi"]["bmi>=40"] = [df.iloc[40,11],[df.iloc[44,11],df.iloc[45, 11]]]
+    data["bmi"]["bmi_bigger_than_40"] = [df.iloc[40,11],[df.iloc[44,11],df.iloc[45, 11]]]
 
     data["wai"] = {}
     data["wai"]["wai-no"] = [df.iloc[50,2],[df.iloc[54,2],df.iloc[55,2]]]
@@ -208,7 +208,7 @@ def iartypre_fetch_99_07(filepath):
     data_RA["age"] = {}
     data_RA["age"]["18-44yrs"] = [df.iloc[3*10,3],[df.iloc[3*10+4,3],df.iloc[3*10+5,3]]]
     data_RA["age"]["44-65yrs"] = [df.iloc[3*10,4],[df.iloc[3*10+4,4],df.iloc[3*10+5,4]]]
-    data_RA["age"][">65yrs"] = [df.iloc[3*10,5],[df.iloc[3*10+4,5],df.iloc[3*10+5,5]]]
+    data_RA["age"]["older_than_65yrs"] = [df.iloc[3*10,5],[df.iloc[3*10+4,5],df.iloc[3*10+5,5]]]
 
     data_RA["race"] = {}
     
@@ -230,9 +230,9 @@ def iartypre_fetch_99_07(filepath):
 
 
     data_RA["edu"] = {}
-    data_RA["edu"]["<high school"] = [df.iloc[3*30,3],[df.iloc[3*30+4,3],df.iloc[3*30+5,3]]]
-    data_RA["edu"]["high school graduate and some college"] = [df.iloc[3*30,4],[df.iloc[3*30+4,4],df.iloc[3*30+5,4]]]
-    data_RA["edu"]["college graduate"] = [df.iloc[3*30,5],[df.iloc[3*30+4,5],df.iloc[3*30+5,5]]]
+    data_RA["edu"]["under_high_school"] = [df.iloc[3*30,3],[df.iloc[3*30+4,3],df.iloc[3*30+5,3]]]
+    data_RA["edu"]["high_school_graduate_and_some_college"] = [df.iloc[3*30,4],[df.iloc[3*30+4,4],df.iloc[3*30+5,4]]]
+    data_RA["edu"]["college_graduate"] = [df.iloc[3*30,5],[df.iloc[3*30+4,5],df.iloc[3*30+5,5]]]
 
     data_RA["bmi"] = {}
     # data_RA["bmi"]["bmi<18.5"] = [df.iloc[3*40,6],[df.iloc[3*40+4,6],df.iloc[3*40+5,6]]]
@@ -240,7 +240,7 @@ def iartypre_fetch_99_07(filepath):
     data_RA["bmi"]["bmi25.0-30.0"] = [df.iloc[3*40,8],[df.iloc[3*40+4,8],df.iloc[3*40+5,8]]]
     data_RA["bmi"]["bmi30.0-35.0"] = [df.iloc[3*40,9],[df.iloc[3*40+4,9],df.iloc[3*40+5,9]]]
     data_RA["bmi"]["bmi35.0-40.0"] = [df.iloc[3*40,10],[df.iloc[3*40+4,10],df.iloc[3*40+5,10]]]
-    data_RA["bmi"]["bmi>=40"] = [df.iloc[3*40,11],[df.iloc[3*40+4,11],df.iloc[3*40+5, 11]]]
+    data_RA["bmi"]["bmi_bigger_than_40"] = [df.iloc[3*40,11],[df.iloc[3*40+4,11],df.iloc[3*40+5, 11]]]
 
     data_RA["wai"] = {}
     data_RA["wai"]["wai-no"] = [df.iloc[3*50,2],[df.iloc[3*50+4,2],df.iloc[3*50+5,2]]]
@@ -276,7 +276,7 @@ def iartypre_fetch_99_07(filepath):
     data_OA["age"] = {}
     data_OA["age"]["18-44yrs"] = [df.iloc[10+3*10,3],[df.iloc[10+3*10+4,3],df.iloc[10+3*10+5,3]]]
     data_OA["age"]["44-65yrs"] = [df.iloc[10+3*10,4],[df.iloc[10+3*10+4,4],df.iloc[10+3*10+5,4]]]
-    data_OA["age"][">65yrs"] = [df.iloc[10+3*10,5],[df.iloc[10+3*10+4,5],df.iloc[10+3*10+5,5]]]
+    data_OA["age"]["older_than_65yrs"] = [df.iloc[10+3*10,5],[df.iloc[10+3*10+4,5],df.iloc[10+3*10+5,5]]]
 
     data_OA["race"] = {}
     
@@ -298,9 +298,9 @@ def iartypre_fetch_99_07(filepath):
 
 
     data_OA["edu"] = {}
-    data_OA["edu"]["<high school"] = [df.iloc[10+3*30,3],[df.iloc[10+3*30+4,3],df.iloc[10+3*30+5,3]]]
-    data_OA["edu"]["high school graduate and some college"] = [df.iloc[10+3*30,4],[df.iloc[10+3*30+4,4],df.iloc[10+3*30+5,4]]]
-    data_OA["edu"]["college graduate"] = [df.iloc[10+3*30,5],[df.iloc[10+3*30+4,5],df.iloc[10+3*30+5,5]]]
+    data_OA["edu"]["under_high_school"] = [df.iloc[10+3*30,3],[df.iloc[10+3*30+4,3],df.iloc[10+3*30+5,3]]]
+    data_OA["edu"]["high_school_graduate_and_some_college"] = [df.iloc[10+3*30,4],[df.iloc[10+3*30+4,4],df.iloc[10+3*30+5,4]]]
+    data_OA["edu"]["college_graduate"] = [df.iloc[10+3*30,5],[df.iloc[10+3*30+4,5],df.iloc[10+3*30+5,5]]]
 
     data_OA["bmi"] = {}
     # data_OA["bmi"]["bmi<18.5"] = [df.iloc[10+3*40,6],[df.iloc[10+3*40+4,6],df.iloc[10+3*40+5,6]]]
@@ -308,7 +308,7 @@ def iartypre_fetch_99_07(filepath):
     data_OA["bmi"]["bmi25.0-30.0"] = [df.iloc[10+3*40,8],[df.iloc[10+3*40+4,8],df.iloc[10+3*40+5,8]]]
     data_OA["bmi"]["bmi30.0-35.0"] = [df.iloc[10+3*40,9],[df.iloc[10+3*40+4,9],df.iloc[10+3*40+5,9]]]
     data_OA["bmi"]["bmi35.0-40.0"] = [df.iloc[10+3*40,10],[df.iloc[10+3*40+4,10],df.iloc[10+3*40+5,10]]]
-    data_OA["bmi"]["bmi>=40"] = [df.iloc[10+3*40,11],[df.iloc[10+3*40+4,11],df.iloc[10+3*40+5, 11]]]
+    data_OA["bmi"]["bmi_bigger_than_40"] = [df.iloc[10+3*40,11],[df.iloc[10+3*40+4,11],df.iloc[10+3*40+5, 11]]]
 
     data_OA["wai"] = {}
     data_OA["wai"]["wai-no"] = [df.iloc[10+3*50,2],[df.iloc[10+3*50+4,2],df.iloc[10+3*50+5,2]]]
@@ -345,7 +345,7 @@ def iartypre_fetch_99_07(filepath):
     data_OT["age"] = {}
     data_OT["age"]["18-44yrs"] = [df.iloc[20+3*10,3],[df.iloc[20+3*10+4,3],df.iloc[20+3*10+5,3]]]
     data_OT["age"]["44-65yrs"] = [df.iloc[20+3*10,4],[df.iloc[20+3*10+4,4],df.iloc[20+3*10+5,4]]]
-    data_OT["age"][">65yrs"] = [df.iloc[20+3*10,5],[df.iloc[20+3*10+4,5],df.iloc[20+3*10+5,5]]]
+    data_OT["age"]["older_than_65yrs"] = [df.iloc[20+3*10,5],[df.iloc[20+3*10+4,5],df.iloc[20+3*10+5,5]]]
 
     data_OT["race"] = {}
     
@@ -367,9 +367,9 @@ def iartypre_fetch_99_07(filepath):
 
 
     data_OT["edu"] = {}
-    data_OT["edu"]["<high school"] = [df.iloc[20+3*30,3],[df.iloc[20+3*30+4,3],df.iloc[20+3*30+5,3]]]
-    data_OT["edu"]["high school graduate and some college"] = [df.iloc[20+3*30,4],[df.iloc[20+3*30+4,4],df.iloc[20+3*30+5,4]]]
-    data_OT["edu"]["college graduate"] = [df.iloc[20+3*30,5],[df.iloc[20+3*30+4,5],df.iloc[20+3*30+5,5]]]
+    data_OT["edu"]["under_high_school"] = [df.iloc[20+3*30,3],[df.iloc[20+3*30+4,3],df.iloc[20+3*30+5,3]]]
+    data_OT["edu"]["high_school_graduate_and_some_college"] = [df.iloc[20+3*30,4],[df.iloc[20+3*30+4,4],df.iloc[20+3*30+5,4]]]
+    data_OT["edu"]["college_graduate"] = [df.iloc[20+3*30,5],[df.iloc[20+3*30+4,5],df.iloc[20+3*30+5,5]]]
 
     data_OT["bmi"] = {}
     # data_OT["bmi"]["bmi<18.5"] = [df.iloc[20+3*40,6],[df.iloc[20+3*40+4,6],df.iloc[20+3*40+5,6]]]
@@ -377,7 +377,7 @@ def iartypre_fetch_99_07(filepath):
     data_OT["bmi"]["bmi25.0-30.0"] = [df.iloc[20+3*40,8],[df.iloc[20+3*40+4,8],df.iloc[20+3*40+5,8]]]
     data_OT["bmi"]["bmi30.0-35.0"] = [df.iloc[20+3*40,9],[df.iloc[20+3*40+4,9],df.iloc[20+3*40+5,9]]]
     data_OT["bmi"]["bmi35.0-40.0"] = [df.iloc[20+3*40,10],[df.iloc[20+3*40+4,10],df.iloc[20+3*40+5,10]]]
-    data_OT["bmi"]["bmi>=40"] = [df.iloc[20+3*40,11],[df.iloc[20+3*40+4,11],df.iloc[20+3*40+5, 11]]]
+    data_OT["bmi"]["bmi_bigger_than_40"] = [df.iloc[20+3*40,11],[df.iloc[20+3*40+4,11],df.iloc[20+3*40+5, 11]]]
 
     data_OT["wai"] = {}
     data_OT["wai"]["wai-no"] = [df.iloc[20+3*50,2],[df.iloc[20+3*50+4,2],df.iloc[20+3*50+5,2]]]
@@ -433,7 +433,7 @@ def iartypre_fetch_09_19(filepath):
     data_RA["age"] = {}
     data_RA["age"]["18-44yrs"] = [df.iloc[10+4*10,3],[df.iloc[10+4*10+4,3],df.iloc[10+4*10+5,3]]]
     data_RA["age"]["44-65yrs"] = [df.iloc[10+4*10,4],[df.iloc[10+4*10+4,4],df.iloc[10+4*10+5,4]]]
-    data_RA["age"][">65yrs"] = [df.iloc[10+4*10,5],[df.iloc[10+4*10+4,5],df.iloc[10+4*10+5,5]]]
+    data_RA["age"]["older_than_65yrs"] = [df.iloc[10+4*10,5],[df.iloc[10+4*10+4,5],df.iloc[10+4*10+5,5]]]
 
     data_RA["race"] = {}
     
@@ -455,9 +455,9 @@ def iartypre_fetch_09_19(filepath):
 
 
     data_RA["edu"] = {}
-    data_RA["edu"]["<high school"] = [df.iloc[10+4*30,3],[df.iloc[10+4*30+4,3],df.iloc[10+4*30+5,3]]]
-    data_RA["edu"]["high school graduate and some college"] = [df.iloc[10+4*30,4],[df.iloc[10+4*30+4,4],df.iloc[10+4*30+5,4]]]
-    data_RA["edu"]["college graduate"] = [df.iloc[10+4*30,5],[df.iloc[10+4*30+4,5],df.iloc[10+4*30+5,5]]]
+    data_RA["edu"]["under_high_school"] = [df.iloc[10+4*30,3],[df.iloc[10+4*30+4,3],df.iloc[10+4*30+5,3]]]
+    data_RA["edu"]["high_school_graduate_and_some_college"] = [df.iloc[10+4*30,4],[df.iloc[10+4*30+4,4],df.iloc[10+4*30+5,4]]]
+    data_RA["edu"]["college_graduate"] = [df.iloc[10+4*30,5],[df.iloc[10+4*30+4,5],df.iloc[10+4*30+5,5]]]
 
     data_RA["bmi"] = {}
     # data_RA["bmi"]["bmi<18.5"] = [df.iloc[10+4*40,6],[df.iloc[10+4*40+4,6],df.iloc[10+4*40+5,6]]]
@@ -465,7 +465,7 @@ def iartypre_fetch_09_19(filepath):
     data_RA["bmi"]["bmi25.0-30.0"] = [df.iloc[10+4*40,8],[df.iloc[10+4*40+4,8],df.iloc[10+4*40+5,8]]]
     data_RA["bmi"]["bmi30.0-35.0"] = [df.iloc[10+4*40,9],[df.iloc[10+4*40+4,9],df.iloc[10+4*40+5,9]]]
     data_RA["bmi"]["bmi35.0-40.0"] = [df.iloc[10+4*40,10],[df.iloc[10+4*40+4,10],df.iloc[10+4*40+5,10]]]
-    data_RA["bmi"]["bmi>=40"] = [df.iloc[10+4*40,11],[df.iloc[10+4*40+4,11],df.iloc[10+4*40+5, 11]]]
+    data_RA["bmi"]["bmi_bigger_than_40"] = [df.iloc[10+4*40,11],[df.iloc[10+4*40+4,11],df.iloc[10+4*40+5, 11]]]
 
     data_RA["wai"] = {}
     data_RA["wai"]["wai-no"] = [df.iloc[10+4*50,2],[df.iloc[10+4*50+4,2],df.iloc[10+4*50+5,2]]]
@@ -501,7 +501,7 @@ def iartypre_fetch_09_19(filepath):
     data_OA["age"] = {}
     data_OA["age"]["18-44yrs"] = [df.iloc[20+4*10,3],[df.iloc[20+4*10+4,3],df.iloc[20+4*10+5,3]]]
     data_OA["age"]["44-65yrs"] = [df.iloc[20+4*10,4],[df.iloc[20+4*10+4,4],df.iloc[20+4*10+5,4]]]
-    data_OA["age"][">65yrs"] = [df.iloc[20+4*10,5],[df.iloc[20+4*10+4,5],df.iloc[20+4*10+5,5]]]
+    data_OA["age"]["older_than_65yrs"] = [df.iloc[20+4*10,5],[df.iloc[20+4*10+4,5],df.iloc[20+4*10+5,5]]]
 
     data_OA["race"] = {}
     
@@ -523,9 +523,9 @@ def iartypre_fetch_09_19(filepath):
 
 
     data_OA["edu"] = {}
-    data_OA["edu"]["<high school"] = [df.iloc[20+4*30,3],[df.iloc[20+4*30+4,3],df.iloc[20+4*30+5,3]]]
-    data_OA["edu"]["high school graduate and some college"] = [df.iloc[20+4*30,4],[df.iloc[20+4*30+4,4],df.iloc[20+4*30+5,4]]]
-    data_OA["edu"]["college graduate"] = [df.iloc[20+4*30,5],[df.iloc[20+4*30+4,5],df.iloc[20+4*30+5,5]]]
+    data_OA["edu"]["under_high_school"] = [df.iloc[20+4*30,3],[df.iloc[20+4*30+4,3],df.iloc[20+4*30+5,3]]]
+    data_OA["edu"]["high_school_graduate_and_some_college"] = [df.iloc[20+4*30,4],[df.iloc[20+4*30+4,4],df.iloc[20+4*30+5,4]]]
+    data_OA["edu"]["college_graduate"] = [df.iloc[20+4*30,5],[df.iloc[20+4*30+4,5],df.iloc[20+4*30+5,5]]]
 
     data_OA["bmi"] = {}
     # data_OA["bmi"]["bmi<18.5"] = [df.iloc[20+4*40,6],[df.iloc[20+4*40+4,6],df.iloc[20+4*40+5,6]]]
@@ -533,7 +533,7 @@ def iartypre_fetch_09_19(filepath):
     data_OA["bmi"]["bmi25.0-30.0"] = [df.iloc[20+4*40,8],[df.iloc[20+4*40+4,8],df.iloc[20+4*40+5,8]]]
     data_OA["bmi"]["bmi30.0-35.0"] = [df.iloc[20+4*40,9],[df.iloc[20+4*40+4,9],df.iloc[20+4*40+5,9]]]
     data_OA["bmi"]["bmi35.0-40.0"] = [df.iloc[20+4*40,10],[df.iloc[20+4*40+4,10],df.iloc[20+4*40+5,10]]]
-    data_OA["bmi"]["bmi>=40"] = [df.iloc[20+4*40,11],[df.iloc[20+4*40+4,11],df.iloc[20+4*40+5, 11]]]
+    data_OA["bmi"]["bmi_bigger_than_40"] = [df.iloc[20+4*40,11],[df.iloc[20+4*40+4,11],df.iloc[20+4*40+5, 11]]]
 
     data_OA["wai"] = {}
     data_OA["wai"]["wai-no"] = [df.iloc[20+4*50,2],[df.iloc[20+4*50+4,2],df.iloc[20+4*50+5,2]]]
@@ -570,7 +570,7 @@ def iartypre_fetch_09_19(filepath):
     data_PA["age"] = {}
     data_PA["age"]["18-44yrs"] = [df.iloc[30+4*10,3],[df.iloc[30+4*10+4,3],df.iloc[30+4*10+5,3]]]
     data_PA["age"]["44-65yrs"] = [df.iloc[30+4*10,4],[df.iloc[30+4*10+4,4],df.iloc[30+4*10+5,4]]]
-    data_PA["age"][">65yrs"] = [df.iloc[30+4*10,5],[df.iloc[30+4*10+4,5],df.iloc[30+4*10+5,5]]]
+    data_PA["age"]["older_than_65yrs"] = [df.iloc[30+4*10,5],[df.iloc[30+4*10+4,5],df.iloc[30+4*10+5,5]]]
 
     data_PA["race"] = {}
     
@@ -592,9 +592,9 @@ def iartypre_fetch_09_19(filepath):
 
 
     data_PA["edu"] = {}
-    data_PA["edu"]["<high school"] = [df.iloc[30+4*30,3],[df.iloc[30+4*30+4,3],df.iloc[30+4*30+5,3]]]
-    data_PA["edu"]["high school graduate and some college"] = [df.iloc[30+4*30,4],[df.iloc[30+4*30+4,4],df.iloc[30+4*30+5,4]]]
-    data_PA["edu"]["college graduate"] = [df.iloc[30+4*30,5],[df.iloc[30+4*30+4,5],df.iloc[30+4*30+5,5]]]
+    data_PA["edu"]["under_high_school"] = [df.iloc[30+4*30,3],[df.iloc[30+4*30+4,3],df.iloc[30+4*30+5,3]]]
+    data_PA["edu"]["high_school_graduate_and_some_college"] = [df.iloc[30+4*30,4],[df.iloc[30+4*30+4,4],df.iloc[30+4*30+5,4]]]
+    data_PA["edu"]["college_graduate"] = [df.iloc[30+4*30,5],[df.iloc[30+4*30+4,5],df.iloc[30+4*30+5,5]]]
 
     data_PA["bmi"] = {}
     # data_PA["bmi"]["bmi<18.5"] = [df.iloc[30+4*40,6],[df.iloc[30+4*40+4,6],df.iloc[30+4*40+5,6]]]
@@ -602,7 +602,7 @@ def iartypre_fetch_09_19(filepath):
     data_PA["bmi"]["bmi25.0-30.0"] = [df.iloc[30+4*40,8],[df.iloc[30+4*40+4,8],df.iloc[30+4*40+5,8]]]
     data_PA["bmi"]["bmi30.0-35.0"] = [df.iloc[30+4*40,9],[df.iloc[30+4*40+4,9],df.iloc[30+4*40+5,9]]]
     data_PA["bmi"]["bmi35.0-40.0"] = [df.iloc[30+4*40,10],[df.iloc[30+4*40+4,10],df.iloc[30+4*40+5,10]]]
-    data_PA["bmi"]["bmi>=40"] = [df.iloc[30+4*40,11],[df.iloc[30+4*40+4,11],df.iloc[30+4*40+5, 11]]]
+    data_PA["bmi"]["bmi_bigger_than_40"] = [df.iloc[30+4*40,11],[df.iloc[30+4*40+4,11],df.iloc[30+4*40+5, 11]]]
 
     data_PA["wai"] = {}
     data_PA["wai"]["wai-no"] = [df.iloc[30+4*50,2],[df.iloc[30+4*50+4,2],df.iloc[30+4*50+5,2]]]
@@ -638,7 +638,7 @@ def iartypre_fetch_09_19(filepath):
     data_OT["age"] = {}
     data_OT["age"]["18-44yrs"] = [df.iloc[40+4*10,3],[df.iloc[40+4*10+4,3],df.iloc[40+4*10+5,3]]]
     data_OT["age"]["44-65yrs"] = [df.iloc[40+4*10,4],[df.iloc[40+4*10+4,4],df.iloc[40+4*10+5,4]]]
-    data_OT["age"][">65yrs"] = [df.iloc[40+4*10,5],[df.iloc[40+4*10+4,5],df.iloc[40+4*10+5,5]]]
+    data_OT["age"]["older_than_65yrs"] = [df.iloc[40+4*10,5],[df.iloc[40+4*10+4,5],df.iloc[40+4*10+5,5]]]
 
     data_OT["race"] = {}
     
@@ -660,9 +660,9 @@ def iartypre_fetch_09_19(filepath):
 
 
     data_OT["edu"] = {}
-    data_OT["edu"]["<high school"] = [df.iloc[40+4*30,3],[df.iloc[40+4*30+4,3],df.iloc[40+4*30+5,3]]]
-    data_OT["edu"]["high school graduate and some college"] = [df.iloc[40+4*30,4],[df.iloc[40+4*30+4,4],df.iloc[40+4*30+5,4]]]
-    data_OT["edu"]["college graduate"] = [df.iloc[40+4*30,5],[df.iloc[40+4*30+4,5],df.iloc[40+4*30+5,5]]]
+    data_OT["edu"]["under_high_school"] = [df.iloc[40+4*30,3],[df.iloc[40+4*30+4,3],df.iloc[40+4*30+5,3]]]
+    data_OT["edu"]["high_school_graduate_and_some_college"] = [df.iloc[40+4*30,4],[df.iloc[40+4*30+4,4],df.iloc[40+4*30+5,4]]]
+    data_OT["edu"]["college_graduate"] = [df.iloc[40+4*30,5],[df.iloc[40+4*30+4,5],df.iloc[40+4*30+5,5]]]
 
     data_OT["bmi"] = {}
     # data_OT["bmi"]["bmi<18.5"] = [df.iloc[40+4*40,6],[df.iloc[40+4*40+4,6],df.iloc[40+4*40+5,6]]]
@@ -670,7 +670,7 @@ def iartypre_fetch_09_19(filepath):
     data_OT["bmi"]["bmi25.0-30.0"] = [df.iloc[40+4*40,8],[df.iloc[40+4*40+4,8],df.iloc[40+4*40+5,8]]]
     data_OT["bmi"]["bmi30.0-35.0"] = [df.iloc[40+4*40,9],[df.iloc[40+4*40+4,9],df.iloc[40+4*40+5,9]]]
     data_OT["bmi"]["bmi35.0-40.0"] = [df.iloc[40+4*40,10],[df.iloc[40+4*40+4,10],df.iloc[40+4*40+5,10]]]
-    data_OT["bmi"]["bmi>=40"] = [df.iloc[40+4*40,11],[df.iloc[40+4*40+4,11],df.iloc[40+4*40+5, 11]]]
+    data_OT["bmi"]["bmi_bigger_than_40"] = [df.iloc[40+4*40,11],[df.iloc[40+4*40+4,11],df.iloc[40+4*40+5, 11]]]
 
     data_OT["wai"] = {}
     data_OT["wai"]["wai-no"] = [df.iloc[40+4*50,2],[df.iloc[40+4*50+4,2],df.iloc[40+4*50+5,2]]]
@@ -770,10 +770,10 @@ if __name__ == "__main__":
                 tmp_dict[key1].append(data_iartypre_RA[key][key1][i+1])
                 tmp_dict[key1].append(data_iartypre_OA[key][key1][i])
                 tmp_dict[key1].append(data_iartypre_OA[key][key1][i+1])
-            if key1 == "NHS":
-                print(tmp_dict)
+            # if key1 == "NHS":
+            #     print(tmp_dict)
+            save_to_json_iartypre(tmp_dict,"data_preprocessed/iartypre/{}.{}.json".format(key,key1))
         # print(tmp_dict)
-        save_to_json_iartypre(tmp_dict,"data_preprocessed/iartypre/{}.json".format(key))
 
     # for key in data_iartypre_PA.keys():
     #     print(key)

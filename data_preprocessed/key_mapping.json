@@ -1,0 +1,67 @@
+{
+    "sex" : {
+        "female"  : "sex.male",
+        "male"    : "sex.female"
+    },
+
+    "age" : {
+        "18-44yrs" : "age.18-44yrs",
+        "44-65yrs" : "age.44-65yrs",
+        ">65yrs"   : "age.order_than_yrs"
+    },
+
+    "race" : {
+        "MA"    : "race.MA",
+        "OH"    : "race.OH",
+        "NHW"   : "race.NHW",
+        "NHB"   : "race.NHB",
+        "NHS"   : "race.NHS",
+        "OR"    : "race.OR"
+    },
+
+    "edu" : {
+        "<high school"                          : "edu.under_high_school",
+        "high school graduate and some college" : "edu.high_school_graduate_and_some_college",
+        "college graduate"                      : "edu.college_graduate"
+    },
+
+    "bmi" : {
+        "bmi18.5-25.0"  : "bmi.bmi18.5-25.0",
+        "bmi25.0-30.0"  : "bmi.bmi25.0-30.0",
+        "bmi30.0-35.0"  : "bmi.bmi30.0-35.0",
+        "bmi35.0-40.0"  : "bmi.bmi35.0-40.0",
+        "bmi>=40"       : "bmi.bmi_bigger_than_40"
+    },
+
+    "wai" : {
+        "wai-no"    : "wai.wai-no",
+        "wai-yes"   : "wai.wai-yes"
+    },
+
+
+    "insu" : {
+        "insu-no"   : "insu.insu-no",
+        "insu-yes"  : "insu.insu-yes"        
+    },
+
+    "pov" : {
+        "pov-no"   : "pov.pov-no",
+        "pov-yes"  : "pov.pov-yes"        
+    }, 
+
+    "smok" : {
+        "smok-yes"      : "smok.smok-yes",
+        "smok-no"       : "smok.smok-no",
+        "smok-unknown"  : "smok.smok_unknown"
+    },
+
+    "phys" : {
+        "phys-vigorous" : "phys.phys-vigorous",
+        "phys-moderate" : "phys.phys-moderate",
+        "phys-no"       : "phys.phys-no"
+    },
+
+    "overall" : {
+        "overall"   : "overall.overall"
+    }
+}
