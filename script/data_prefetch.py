@@ -762,8 +762,8 @@ if __name__ == "__main__":
         save_to_json_ipre(data_ipre[key],"data_preprocessed/ipre/{}.json".format(key))
 
     for key in data_iartypre_RA.keys():
-        tmp_dict = {}
         for key1 in data_iartypre_RA[key]:
+            tmp_dict = {}
             tmp_dict[key1] = []
             for i in range(0,len(data_iartypre_RA[key][key1]),2):
                 tmp_dict[key1].append(data_iartypre_RA[key][key1][i])
