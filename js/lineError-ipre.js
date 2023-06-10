@@ -44,12 +44,20 @@ option_ipre_template = {
   // ],
   xAxis: {
     // data: years,
+    nameRotate: 45,
+    // nameLocation: 'middle',
+    name: 'Year',
     axisLabel : {
-      fontSize : '18',
+      fontSize : '12',
     },
 
   },
   yAxis: {
+    min: 0,
+    max: 60,
+    nameRotate: 45,
+    // nameLocation: 'middle',
+    name: 'IPRE(%)',
     axisLabel : {
       fontSize : '18',
     },
@@ -85,7 +93,7 @@ function updateIpreGraph(datapath) {
     for(var i = 0; i < dataCount; i++)
     {
       option.legend.data.push(keys[i]);
-      option.legend.data.push("error-"+keys[i]);
+      option.legend.data.push("95%CI"+keys[i]);
       lineData.push([]);
       errorData.push([]);
       keyLen = data[i].length
@@ -110,7 +118,7 @@ function updateIpreGraph(datapath) {
         });
       option.series.push({
           type: 'custom',
-          name: 'error-'+keys[i],
+          name: '95%CI'+keys[i],
           itemStyle: {
             borderWidth: 1.5,
             color: colors[i],

@@ -44,12 +44,20 @@ option_arty_template = {
   // ],
   xAxis: {
     // data: years,
+    nameRotate: 45,
+    // nameLocation: 'middle',
+    name: 'Year',
     axisLabel : {
-      fontSize : '18',
+      fontSize : '12',
     },
 
   },
   yAxis: {
+    min: 0,
+    max: 100,
+    nameRotate: 45,
+    // nameLocation: 'middle',
+    name: 'IARTY(%)',
     axisLabel : {
       fontSize : '18',
     },
@@ -87,9 +95,9 @@ function updateArtyGraph(datapath) {
     for(var i = 0; i < dataCount; i++)
     {
       option.legend.data.push(keys[i]+'-RA');
-      option.legend.data.push("error-"+keys[i]+'-RA');
+      option.legend.data.push("95%CI-"+keys[i]+'-RA');
       option.legend.data.push(keys[i]+'-OA');
-      option.legend.data.push("error-"+keys[i]+'-OA');
+      option.legend.data.push("95%CI-"+keys[i]+'-OA');
       lineData_RA.push([]);
       errorData_RA.push([]);
       lineData_OA.push([]);
@@ -129,7 +137,7 @@ function updateArtyGraph(datapath) {
         });
       option.series.push({
           type: 'custom',
-          name: 'error-'+keys[i]+'-RA',
+          name: '95%CI-'+keys[i]+'-RA',
           itemStyle: {
             borderWidth: 1.5,
             color: colors[i],
@@ -193,7 +201,7 @@ function updateArtyGraph(datapath) {
         })
       option.series.push({
           type: 'custom',
-          name: 'error-'+keys[i]+'-OA',
+          name: '95%CI-'+keys[i]+'-OA',
           itemStyle: {
             borderWidth: 1.5,
             color: colors[i+1],
