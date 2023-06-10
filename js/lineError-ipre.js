@@ -30,18 +30,18 @@ option_ipre_template = {
     align: 'left',
     data: []
   },
-  dataZoom: [
-    {
-      type: 'slider',
-      start: 0,
-      end: 100
-    },
-    {
-      type: 'inside',
-      start: 0,
-      end: 100
-    }
-  ],
+  // dataZoom: [
+  //   {
+  //     type: 'slider',
+  //     start: 0,
+  //     end: 100
+  //   },
+  //   {
+  //     type: 'inside',
+  //     start: 0,
+  //     end: 100
+  //   }
+  // ],
   xAxis: {
     // data: years,
     axisLabel : {
@@ -179,7 +179,7 @@ function updateIpreGraph(datapath) {
 }
 
 updateIpreGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
-// updateIpreGraph("../data_preprocessed/ipre/age.json")
+// updateIpreGraph("../data_preprocessed/ipre/overall.json")
 
 // sleep for 5 seconds
 
@@ -198,6 +198,7 @@ function ipreSelectChange() {
   let value = objS.options[objS.selectedIndex].value;
   console.log(value)
   datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/" + value + ".json";
+  // datapath = "..data_preprocessed/ipre/" + value + ".json";
   updateIpreGraph(datapath);
 }
   

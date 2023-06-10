@@ -30,18 +30,18 @@ option_arty_template = {
     align: 'left',
     data: []
   },
-  dataZoom: [
-    {
-      type: 'slider',
-      start: 0,
-      end: 100
-    },
-    {
-      type: 'inside',
-      start: 0,
-      end: 100
-    }
-  ],
+  // dataZoom: [
+  //   {
+  //     type: 'slider',
+  //     start: 0,
+  //     end: 100
+  //   },
+  //   {
+  //     type: 'inside',
+  //     start: 0,
+  //     end: 100
+  //   }
+  // ],
   xAxis: {
     // data: years,
     axisLabel : {
@@ -268,6 +268,7 @@ function updateArtyGraph(datapath) {
 
 
 updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.json")
+// updateArtyGraph("../data_preprocessed/iartypre/overall.overall.json")
 // sleep for 5 seconds
 
 // setTimeout(() => {
@@ -310,11 +311,17 @@ function changeSubSelect(key) {
 }
 
 function artySelectChange() {
+  let objSub = document.getElementById("ipreselect-arty-sub");
   let objS = document.getElementById("ipreselect-arty");
+  
   let key = objS.options[objS.selectedIndex].value;
   changeSubSelect(key);
-  // datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
-  // updateArtyGraph(datapath);
+
+  let subkey = objSub.options[objSub.selectedIndex].value;
+
+  value = arty_sub_map[key][subkey]
+  datapath = "../data_preprocessed/iartypre/" + value + ".json";
+  updateArtyGraph(datapath);
 }
 
 function artySubSelectChange() {
@@ -326,6 +333,7 @@ function artySubSelectChange() {
 
   value = arty_sub_map[key][subkey]
   datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
+  // datapath = "../data_preprocessed/iartypre/" + value + ".json";
   updateArtyGraph(datapath);
 }
   
