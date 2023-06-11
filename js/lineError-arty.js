@@ -30,6 +30,9 @@ option_arty_template = {
     align: 'left',
     data: []
   },
+  grid: {
+    right: '15%',
+  },
   // dataZoom: [
   //   {
   //     type: 'slider',
