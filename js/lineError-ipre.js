@@ -4,10 +4,17 @@ var myChart_ipre = echarts.init(chartDom_ipre);
 var option_ipre_template;
 
 
-
+var ipre_sub_map;
 var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
 // read data from local position'../data/sex_female.json'
 
+fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
+  .then(response => response.json())
+  .then(json => {
+    // copy option_template to option
+    ipre_sub_map = json;
+    console.log(ipre_sub_map);
+  });
 
 
 option_ipre_template = {
@@ -71,7 +78,7 @@ option_ipre_template = {
 
 
 
-function updateIpreGraph(datapath) {
+function updateIpreGraph(keySelect,datapath) {
   fetch(datapath)
   .then(response => response.json())
   .then(json => {
@@ -85,7 +92,7 @@ function updateIpreGraph(datapath) {
     let raw_data = json;
     console.log(raw_data)
     years = raw_data.years;
-    keys = raw_data.keys;
+    keys = Object.keys(ipre_sub_map[keySelect]);
     data = raw_data.data;
     option.xAxis.data = years;
     dataCount = keys.length;
@@ -186,7 +193,7 @@ function updateIpreGraph(datapath) {
   });
 }
 
-updateIpreGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+updateIpreGraph("overall","https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
 // updateIpreGraph("../data_preprocessed/ipre/overall.json")
 
 // sleep for 5 seconds
@@ -207,7 +214,7 @@ function ipreSelectChange() {
   console.log(value)
   datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/" + value + ".json";
   // datapath = "..data_preprocessed/ipre/" + value + ".json";
-  updateIpreGraph(datapath);
+  updateIpreGraph(value,datapath);
 }
   
 window.onresize = function () {

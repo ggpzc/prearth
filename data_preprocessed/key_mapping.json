@@ -5,9 +5,9 @@
     },
 
     "age" : {
-        "18-44yrs" : "age.18-44yrs",
-        "44-65yrs" : "age.44-65yrs",
-        ">65yrs"   : "age.order_than_yrs"
+        "18-44yrs"      : "age.18-44yrs",
+        "44-65yrs"      : "age.44-65yrs",
+        ">65yrs"        : "age.older_than_65yrs"
     },
 
     "race" : {
@@ -20,7 +20,7 @@
     },
 
     "edu" : {
-        "smaller than high school"                          : "edu.under_high_school",
+        "smaller than high school"              : "edu.under_high_school",
         "high school graduate and some college" : "edu.high_school_graduate_and_some_college",
         "college graduate"                      : "edu.college_graduate"
     },

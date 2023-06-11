@@ -170,12 +170,13 @@ def ipre_fecth(filepath):
 
     data["smok"] = {}
     data["smok"]["smok-yes"] = [df.iloc[80,3],[df.iloc[84,3],df.iloc[85,3]]]
-    data["smok"]["smok-no"] = [df.iloc[80,4],[df.iloc[84,4],df.iloc[85,5]]]
+    data["smok"]["smok-no"] = [df.iloc[80,4],[df.iloc[84,4],df.iloc[85,4]]]
+
     data["smok"]["smok-unknown"] = [df.iloc[80,5],[df.iloc[84,5],df.iloc[85,5]]]
 
     data["phys"] = {}
     data["phys"]["phys-vigorous"] = [df.iloc[90,3],[df.iloc[94,3],df.iloc[95,3]]]
-    data["phys"]["phys-moderate"] = [df.iloc[90,4],[df.iloc[94,4],df.iloc[95,5]]]
+    data["phys"]["phys-moderate"] = [df.iloc[90,4],[df.iloc[94,4],df.iloc[95,4]]]
     data["phys"]["phys-no"] = [df.iloc[90,5],[df.iloc[94,5],df.iloc[95,5]]]
 
     data["overall"] = {}
@@ -256,12 +257,12 @@ def iartypre_fetch_99_07(filepath):
 
     data_RA["smok"] = {}
     data_RA["smok"]["smok-yes"] = [df.iloc[3*80,3],[df.iloc[3*80+4,3],df.iloc[3*80+5,3]]]
-    data_RA["smok"]["smok-no"] = [df.iloc[3*80,4],[df.iloc[3*80+4,4],df.iloc[3*80+5,5]]]
+    data_RA["smok"]["smok-no"] = [df.iloc[3*80,4],[df.iloc[3*80+4,4],df.iloc[3*80+5,4]]]
     data_RA["smok"]["smok-unknown"] = [df.iloc[3*80,5],[df.iloc[3*80+4,5],df.iloc[3*80+5,5]]]
 
     data_RA["phys"] = {}
     data_RA["phys"]["phys-vigorous"] = [df.iloc[3*90,3],[df.iloc[3*90+4,3],df.iloc[3*90+5,3]]]
-    data_RA["phys"]["phys-moderate"] = [df.iloc[3*90,4],[df.iloc[3*90+4,4],df.iloc[3*90+5,5]]]
+    data_RA["phys"]["phys-moderate"] = [df.iloc[3*90,4],[df.iloc[3*90+4,4],df.iloc[3*90+5,4]]]
     data_RA["phys"]["phys-no"] = [df.iloc[3*90,5],[df.iloc[3*90+4,5],df.iloc[3*90+5,5]]]
 
     data_RA["overall"] = {}
@@ -324,12 +325,12 @@ def iartypre_fetch_99_07(filepath):
 
     data_OA["smok"] = {}
     data_OA["smok"]["smok-yes"] = [df.iloc[10+3*80,3],[df.iloc[10+3*80+4,3],df.iloc[10+3*80+5,3]]]
-    data_OA["smok"]["smok-no"] = [df.iloc[10+3*80,4],[df.iloc[10+3*80+4,4],df.iloc[10+3*80+5,5]]]
+    data_OA["smok"]["smok-no"] = [df.iloc[10+3*80,4],[df.iloc[10+3*80+4,4],df.iloc[10+3*80+5,4]]]
     data_OA["smok"]["smok-unknown"] = [df.iloc[10+3*80,5],[df.iloc[10+3*80+4,5],df.iloc[10+3*80+5,5]]]
 
     data_OA["phys"] = {}
     data_OA["phys"]["phys-vigorous"] = [df.iloc[10+3*90,3],[df.iloc[10+3*90+4,3],df.iloc[10+3*90+5,3]]]
-    data_OA["phys"]["phys-moderate"] = [df.iloc[10+3*90,4],[df.iloc[10+3*90+4,4],df.iloc[10+3*90+5,5]]]
+    data_OA["phys"]["phys-moderate"] = [df.iloc[10+3*90,4],[df.iloc[10+3*90+4,4],df.iloc[10+3*90+5,4]]]
     data_OA["phys"]["phys-no"] = [df.iloc[10+3*90,5],[df.iloc[10+3*90+4,5],df.iloc[10+3*90+5,5]]]
 
     data_OA["overall"] = {}
@@ -393,12 +394,12 @@ def iartypre_fetch_99_07(filepath):
 
     data_OT["smok"] = {}
     data_OT["smok"]["smok-yes"] = [df.iloc[20+3*80,3],[df.iloc[20+3*80+4,3],df.iloc[20+3*80+5,3]]]
-    data_OT["smok"]["smok-no"] = [df.iloc[20+3*80,4],[df.iloc[20+3*80+4,4],df.iloc[20+3*80+5,5]]]
+    data_OT["smok"]["smok-no"] = [df.iloc[20+3*80,4],[df.iloc[20+3*80+4,4],df.iloc[20+3*80+5,4]]]
     data_OT["smok"]["smok-unknown"] = [df.iloc[20+3*80,5],[df.iloc[20+3*80+4,5],df.iloc[20+3*80+5,5]]]
 
     data_OT["phys"] = {}
     data_OT["phys"]["phys-vigorous"] = [df.iloc[20+3*90,3],[df.iloc[20+3*90+4,3],df.iloc[20+3*90+5,3]]]
-    data_OT["phys"]["phys-moderate"] = [df.iloc[20+3*90,4],[df.iloc[20+3*90+4,4],df.iloc[20+3*90+5,5]]]
+    data_OT["phys"]["phys-moderate"] = [df.iloc[20+3*90,4],[df.iloc[20+3*90+4,4],df.iloc[20+3*90+5,4]]]
     data_OT["phys"]["phys-no"] = [df.iloc[20+3*90,5],[df.iloc[20+3*90+4,5],df.iloc[20+3*90+5,5]]]
 
     data_OT["overall"] = {}
@@ -481,12 +482,12 @@ def iartypre_fetch_09_19(filepath):
 
     data_RA["smok"] = {}
     data_RA["smok"]["smok-yes"] = [df.iloc[10+4*80,3],[df.iloc[10+4*80+4,3],df.iloc[10+4*80+5,3]]]
-    data_RA["smok"]["smok-no"] = [df.iloc[10+4*80,4],[df.iloc[10+4*80+4,4],df.iloc[10+4*80+5,5]]]
+    data_RA["smok"]["smok-no"] = [df.iloc[10+4*80,4],[df.iloc[10+4*80+4,4],df.iloc[10+4*80+5,4]]]
     data_RA["smok"]["smok-unknown"] = [df.iloc[10+4*80,5],[df.iloc[10+4*80+4,5],df.iloc[10+4*80+5,5]]]
 
     data_RA["phys"] = {}
     data_RA["phys"]["phys-vigorous"] = [df.iloc[10+4*90,3],[df.iloc[10+4*90+4,3],df.iloc[10+4*90+5,3]]]
-    data_RA["phys"]["phys-moderate"] = [df.iloc[10+4*90,4],[df.iloc[10+4*90+4,4],df.iloc[10+4*90+5,5]]]
+    data_RA["phys"]["phys-moderate"] = [df.iloc[10+4*90,4],[df.iloc[10+4*90+4,4],df.iloc[10+4*90+5,4]]]
     data_RA["phys"]["phys-no"] = [df.iloc[10+4*90,5],[df.iloc[10+4*90+4,5],df.iloc[10+4*90+5,5]]]
 
     data_RA["overall"] = {}
@@ -549,12 +550,12 @@ def iartypre_fetch_09_19(filepath):
 
     data_OA["smok"] = {}
     data_OA["smok"]["smok-yes"] = [df.iloc[20+4*80,3],[df.iloc[20+4*80+4,3],df.iloc[20+4*80+5,3]]]
-    data_OA["smok"]["smok-no"] = [df.iloc[20+4*80,4],[df.iloc[20+4*80+4,4],df.iloc[20+4*80+5,5]]]
+    data_OA["smok"]["smok-no"] = [df.iloc[20+4*80,4],[df.iloc[20+4*80+4,4],df.iloc[20+4*80+5,4]]]
     data_OA["smok"]["smok-unknown"] = [df.iloc[20+4*80,5],[df.iloc[20+4*80+4,5],df.iloc[20+4*80+5,5]]]
 
     data_OA["phys"] = {}
     data_OA["phys"]["phys-vigorous"] = [df.iloc[20+4*90,3],[df.iloc[20+4*90+4,3],df.iloc[20+4*90+5,3]]]
-    data_OA["phys"]["phys-moderate"] = [df.iloc[20+4*90,4],[df.iloc[20+4*90+4,4],df.iloc[20+4*90+5,5]]]
+    data_OA["phys"]["phys-moderate"] = [df.iloc[20+4*90,4],[df.iloc[20+4*90+4,4],df.iloc[20+4*90+5,4]]]
     data_OA["phys"]["phys-no"] = [df.iloc[20+4*90,5],[df.iloc[20+4*90+4,5],df.iloc[20+4*90+5,5]]]
 
     data_OA["overall"] = {}
@@ -618,12 +619,12 @@ def iartypre_fetch_09_19(filepath):
 
     data_PA["smok"] = {}
     data_PA["smok"]["smok-yes"] = [df.iloc[30+4*80,3],[df.iloc[30+4*80+4,3],df.iloc[30+4*80+5,3]]]
-    data_PA["smok"]["smok-no"] = [df.iloc[30+4*80,4],[df.iloc[30+4*80+4,4],df.iloc[30+4*80+5,5]]]
+    data_PA["smok"]["smok-no"] = [df.iloc[30+4*80,4],[df.iloc[30+4*80+4,4],df.iloc[30+4*80+5,4]]]
     data_PA["smok"]["smok-unknown"] = [df.iloc[30+4*80,5],[df.iloc[30+4*80+4,5],df.iloc[30+4*80+5,5]]]
 
     data_PA["phys"] = {}
     data_PA["phys"]["phys-vigorous"] = [df.iloc[30+4*90,3],[df.iloc[30+4*90+4,3],df.iloc[30+4*90+5,3]]]
-    data_PA["phys"]["phys-moderate"] = [df.iloc[30+4*90,4],[df.iloc[30+4*90+4,4],df.iloc[30+4*90+5,5]]]
+    data_PA["phys"]["phys-moderate"] = [df.iloc[30+4*90,4],[df.iloc[30+4*90+4,4],df.iloc[30+4*90+5,4]]]
     data_PA["phys"]["phys-no"] = [df.iloc[30+4*90,5],[df.iloc[30+4*90+4,5],df.iloc[30+4*90+5,5]]]
 
     data_PA["overall"] = {}
@@ -686,12 +687,12 @@ def iartypre_fetch_09_19(filepath):
 
     data_OT["smok"] = {}
     data_OT["smok"]["smok-yes"] = [df.iloc[40+4*80,3],[df.iloc[40+4*80+4,3],df.iloc[40+4*80+5,3]]]
-    data_OT["smok"]["smok-no"] = [df.iloc[40+4*80,4],[df.iloc[40+4*80+4,4],df.iloc[40+4*80+5,5]]]
+    data_OT["smok"]["smok-no"] = [df.iloc[40+4*80,4],[df.iloc[40+4*80+4,4],df.iloc[40+4*80+5,4]]]
     data_OT["smok"]["smok-unknown"] = [df.iloc[40+4*80,5],[df.iloc[40+4*80+4,5],df.iloc[40+4*80+5,5]]]
 
     data_OT["phys"] = {}
     data_OT["phys"]["phys-vigorous"] = [df.iloc[40+4*90,3],[df.iloc[40+4*90+4,3],df.iloc[40+4*90+5,3]]]
-    data_OT["phys"]["phys-moderate"] = [df.iloc[40+4*90,4],[df.iloc[40+4*90+4,4],df.iloc[40+4*90+5,5]]]
+    data_OT["phys"]["phys-moderate"] = [df.iloc[40+4*90,4],[df.iloc[40+4*90+4,4],df.iloc[40+4*90+5,4]]]
     data_OT["phys"]["phys-no"] = [df.iloc[40+4*90,5],[df.iloc[40+4*90+4,5],df.iloc[40+4*90+5,5]]]
 
     data_OT["overall"] = {}
@@ -775,176 +776,176 @@ if __name__ == "__main__":
             save_to_json_iartypre(tmp_dict,"data_preprocessed/iartypre/{}.{}.json".format(key,key1))
         # print(tmp_dict)
 
-    # for key in data_iartypre_PA.keys():
-    #     print(key)
-    #     for key1 in data_iartypre_PA[key].keys():
-    #         print(key1,end="  ")
-    #         print(data_iartypre_PA[key][key1])
+    for key in data_iartypre_PA.keys():
+        print(key)
+        for key1 in data_iartypre_PA[key].keys():
+            print(key1,end="  ")
+            print(data_iartypre_PA[key][key1])
 
 
-    # excel = pd.DataFrame(columns=["","1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
+    excel = pd.DataFrame(columns=["","1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
 
-    # for key in data_ipre.keys():
-    #     key_line = [key] + ["" for i in range(11)]
-    #     excel.loc[12] = key_line
-    #     excel.index = excel.index + 1
+    for key in data_ipre.keys():
+        key_line = [key] + ["" for i in range(11)]
+        excel.loc[12] = key_line
+        excel.index = excel.index + 1
 
-    #     for key1 in data_ipre[key].keys():
-    #         data_line = [key1] 
-    #         # ci_l = [""] 
-    #         # ci_h = [""] 
-    #         print(data_ipre[key][key1])
-    #         for i in range(0,len(data_ipre[key][key1]),2):
-    #             if data_ipre[key][key1][i]:
-    #                 data = "{:.2f}".format(data_ipre[key][key1][i]*100)
-    #             else:
-    #                 data = ""
+        for key1 in data_ipre[key].keys():
+            data_line = [key1] 
+            # ci_l = [""] 
+            # ci_h = [""] 
+            print(data_ipre[key][key1])
+            for i in range(0,len(data_ipre[key][key1]),2):
+                if data_ipre[key][key1][i]:
+                    data = "{:.2f}".format(data_ipre[key][key1][i]*100)
+                else:
+                    data = ""
             
 
-    #             if data_ipre[key][key1][i+1][0]:
-    #                 data += "( "
-    #                 data += "{:.2f}".format(data_ipre[key][key1][i+1][0]*100)
-    #                 data += "-"
-    #                 data += "{:.2f}".format(data_ipre[key][key1][i+1][1]*100)
-    #                 data += " )"
-    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 data = ""
-    #                 # ci_l.append("")
-    #                 # ci_h.append("")
-    #             data_line.append(data)
+                if data_ipre[key][key1][i+1][0]:
+                    data += "( "
+                    data += "{:.2f}".format(data_ipre[key][key1][i+1][0]*100)
+                    data += "-"
+                    data += "{:.2f}".format(data_ipre[key][key1][i+1][1]*100)
+                    data += " )"
+                    # ci_l.append(data_ipre[key][key1][i+1][0])
+                    # ci_h.append(data_ipre[key][key1][i+1][1])
+                else:
+                    data = ""
+                    # ci_l.append("")
+                    # ci_h.append("")
+                data_line.append(data)
 
 
        
-    #         print(data_line)
-    #         excel.loc[12] = data_line
-    #         excel.index = excel.index + 1
-    #         # excel.loc[12] = ci_l
-    #         # excel.index = excel.index + 1
-    #         # excel.loc[12] = ci_h
-    #         # excel.index = excel.index + 1
+            print(data_line)
+            excel.loc[12] = data_line
+            excel.index = excel.index + 1
+            # excel.loc[12] = ci_l
+            # excel.index = excel.index + 1
+            # excel.loc[12] = ci_h
+            # excel.index = excel.index + 1
 
-    # excel.to_excel("ipre.xlsx",index=False)
+    excel.to_excel("ipre.xlsx",index=False)
 
 
 
-    # excel2 = pd.DataFrame(columns=["","","1999-2000", "1999-2000","1999-2000","2001-2002", "2001-2002","2001-2002",
-    #                                "2003-2004", "2003-2004","2003-2004","2005-2006", "2005-2006","2005-2006",
-    #                                "2007-2008", "2007-2008","2007-2008","2009-2010", "2009-2010","2009-2010",
-    #                                "2011-2012", "2011-2012","2011-2012","2013-2014", "2013-2014","2013-2014",
-    #                                "2015-2016", "2015-2016","2015-2016","2017-2018", "2017-2018","2017-2018",
-    #                                "2019-2020","2019-2020","2019-2020"])
+    excel2 = pd.DataFrame(columns=["","","1999-2000", "1999-2000","1999-2000","2001-2002", "2001-2002","2001-2002",
+                                   "2003-2004", "2003-2004","2003-2004","2005-2006", "2005-2006","2005-2006",
+                                   "2007-2008", "2007-2008","2007-2008","2009-2010", "2009-2010","2009-2010",
+                                   "2011-2012", "2011-2012","2011-2012","2013-2014", "2013-2014","2013-2014",
+                                   "2015-2016", "2015-2016","2015-2016","2017-2018", "2017-2018","2017-2018",
+                                   "2019-2020","2019-2020","2019-2020"])
 
-    # excel2 = pd.DataFrame(columns=["","", "1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
+    excel2 = pd.DataFrame(columns=["","", "1999-2000", "2001-2002", "2003-2004", "2005-2006", "2007-2008", "2009-2010", "2011-2012", "2013-2014", "2015-2016", "2017-2018", "2019-2020"])
 
-    # for key in data_ipre.keys():
-    #     key_line = [key] + ["" for i in range(12)]
-    #     excel2.loc[13] = key_line
-    #     excel2.index = excel2.index + 1
+    for key in data_ipre.keys():
+        key_line = [key] + ["" for i in range(12)]
+        excel2.loc[13] = key_line
+        excel2.index = excel2.index + 1
 
-    #     for key1 in data_iartypre_RA[key].keys():
-    #         data_line_RA = [key1, "RA"]
-    #         data_line_OA = [key1, "OA"]
-    #         data_line_PA = [key1, "PA"]
-    #         data_line_OT = [key1, "OT"]
-    #         print(data_iartypre_RA[key][key1])
-    #         for i in range(0,len(data_iartypre_RA[key][key1]),2):
-    #             data = ""
-    #             if data_iartypre_RA[key][key1][i]:
-    #                 data = "{:.2f}".format(data_iartypre_RA[key][key1][i]*100)
-    #             else:
-    #                 data = ""
+        for key1 in data_iartypre_RA[key].keys():
+            data_line_RA = [key1, "RA"]
+            data_line_OA = [key1, "OA"]
+            data_line_PA = [key1, "PA"]
+            data_line_OT = [key1, "OT"]
+            print(data_iartypre_RA[key][key1])
+            for i in range(0,len(data_iartypre_RA[key][key1]),2):
+                data = ""
+                if data_iartypre_RA[key][key1][i]:
+                    data = "{:.2f}".format(data_iartypre_RA[key][key1][i]*100)
+                else:
+                    data = ""
             
 
-    #             if data_iartypre_RA[key][key1][i+1][0]:
-    #                 data += "( "
-    #                 data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][0]*100)
-    #                 data += "-"
-    #                 data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][1]*100)
-    #                 data += " )"
-    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 data = ""
-    #                 # ci_l.append("")
-    #                 # ci_h.append("")
-    #             data_line_RA.append(data)
+                if data_iartypre_RA[key][key1][i+1][0]:
+                    data += "( "
+                    data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][0]*100)
+                    data += "-"
+                    data += "{:.2f}".format(data_iartypre_RA[key][key1][i+1][1]*100)
+                    data += " )"
+                    # ci_l.append(data_ipre[key][key1][i+1][0])
+                    # ci_h.append(data_ipre[key][key1][i+1][1])
+                else:
+                    data = ""
+                    # ci_l.append("")
+                    # ci_h.append("")
+                data_line_RA.append(data)
 
 
-    #             data = ""
-    #             if data_iartypre_OA[key][key1][i]:
-    #                 data = "{:.2f}".format(data_iartypre_OA[key][key1][i]*100)
-    #             else:
-    #                 data = ""
+                data = ""
+                if data_iartypre_OA[key][key1][i]:
+                    data = "{:.2f}".format(data_iartypre_OA[key][key1][i]*100)
+                else:
+                    data = ""
             
 
-    #             if data_iartypre_OA[key][key1][i+1][0]:
-    #                 data += "( "
-    #                 data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][0]*100)
-    #                 data += "-"
-    #                 data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][1]*100)
-    #                 data += " )"
-    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 data = ""
-    #                 # ci_l.append("")
-    #                 # ci_h.append("")
-    #             data_line_OA.append(data)
+                if data_iartypre_OA[key][key1][i+1][0]:
+                    data += "( "
+                    data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][0]*100)
+                    data += "-"
+                    data += "{:.2f}".format(data_iartypre_OA[key][key1][i+1][1]*100)
+                    data += " )"
+                    # ci_l.append(data_ipre[key][key1][i+1][0])
+                    # ci_h.append(data_ipre[key][key1][i+1][1])
+                else:
+                    data = ""
+                    # ci_l.append("")
+                    # ci_h.append("")
+                data_line_OA.append(data)
 
-    #             data = ""
-    #             if data_iartypre_PA[key][key1][i]:
-    #                 data = "{:.2f}".format(data_iartypre_PA[key][key1][i]*100)
-    #             else:
-    #                 data = ""
+                data = ""
+                if data_iartypre_PA[key][key1][i]:
+                    data = "{:.2f}".format(data_iartypre_PA[key][key1][i]*100)
+                else:
+                    data = ""
             
 
-    #             if data_iartypre_PA[key][key1][i+1][0]:
-    #                 data += "( "
-    #                 data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][0]*100)
-    #                 data += "-"
-    #                 data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][1]*100)
-    #                 data += " )"
-    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 data = ""
-    #                 # ci_l.append("")
-    #                 # ci_h.append("")
-    #             data_line_PA.append(data)
+                if data_iartypre_PA[key][key1][i+1][0]:
+                    data += "( "
+                    data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][0]*100)
+                    data += "-"
+                    data += "{:.2f}".format(data_iartypre_PA[key][key1][i+1][1]*100)
+                    data += " )"
+                    # ci_l.append(data_ipre[key][key1][i+1][0])
+                    # ci_h.append(data_ipre[key][key1][i+1][1])
+                else:
+                    data = ""
+                    # ci_l.append("")
+                    # ci_h.append("")
+                data_line_PA.append(data)
                 
 
-    #             data = ""
-    #             if data_iartypre_OT[key][key1][i]:
-    #                 data = "{:.2f}".format(data_iartypre_OT[key][key1][i]*100)
-    #             else:
-    #                 data = ""
+                data = ""
+                if data_iartypre_OT[key][key1][i]:
+                    data = "{:.2f}".format(data_iartypre_OT[key][key1][i]*100)
+                else:
+                    data = ""
             
 
-    #             if data_iartypre_OT[key][key1][i+1][0]:
-    #                 data += "( "
-    #                 data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][0]*100)
-    #                 data += "-"
-    #                 data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][1]*100)
-    #                 data += " )"
-    #                 # ci_l.append(data_ipre[key][key1][i+1][0])
-    #                 # ci_h.append(data_ipre[key][key1][i+1][1])
-    #             else:
-    #                 data = ""
-    #                 # ci_l.append("")
-    #                 # ci_h.append("")
-    #             data_line_OT.append(data)
+                if data_iartypre_OT[key][key1][i+1][0]:
+                    data += "( "
+                    data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][0]*100)
+                    data += "-"
+                    data += "{:.2f}".format(data_iartypre_OT[key][key1][i+1][1]*100)
+                    data += " )"
+                    # ci_l.append(data_ipre[key][key1][i+1][0])
+                    # ci_h.append(data_ipre[key][key1][i+1][1])
+                else:
+                    data = ""
+                    # ci_l.append("")
+                    # ci_h.append("")
+                data_line_OT.append(data)
 
 
-    #         print(data_line_RA)
-    #         excel2.loc[13] = data_line_RA
-    #         excel2.index = excel2.index + 1
-    #         excel2.loc[13] = data_line_OA
-    #         excel2.index = excel2.index + 1
-    #         excel2.loc[13] = data_line_PA
-    #         excel2.index = excel2.index + 1
-    #         excel2.loc[13] = data_line_OT
-    #         excel2.index = excel2.index + 1
+            print(data_line_RA)
+            excel2.loc[13] = data_line_RA
+            excel2.index = excel2.index + 1
+            excel2.loc[13] = data_line_OA
+            excel2.index = excel2.index + 1
+            excel2.loc[13] = data_line_PA
+            excel2.index = excel2.index + 1
+            excel2.loc[13] = data_line_OT
+            excel2.index = excel2.index + 1
 
-    # excel2.to_excel("iartypre.xlsx",index=False)
+    excel2.to_excel("iartypre.xlsx",index=False)

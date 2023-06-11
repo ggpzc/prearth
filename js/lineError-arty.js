@@ -71,8 +71,8 @@ option_arty_template = {
 
 
 
-function updateArtyGraph(datapath) {
-  fetch(datapath)
+function updateArtyGraph(subkey, filename) {
+  fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + filename + ".json")
   .then(response => response.json())
   .then(json => {
     // copy option_template to option
@@ -87,7 +87,7 @@ function updateArtyGraph(datapath) {
     let raw_data = json;
     console.log(raw_data)
     years = raw_data.years;
-    keys = raw_data.keys;
+    keys = [subkey];
     data = raw_data.data;
     option.xAxis.data = years;
     dataCount = keys.length;
@@ -275,7 +275,7 @@ function updateArtyGraph(datapath) {
 
 
 
-updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/overall.overall.json")
+updateArtyGraph("overall","overall.overall")
 // updateArtyGraph("../data_preprocessed/iartypre/overall.overall.json")
 // sleep for 5 seconds
 
@@ -289,6 +289,7 @@ updateArtyGraph("https://ggpzc.github.io/prearth.github.io/data_preprocessed/iar
 
 
 
+// fetch("../data_preprocessed/key_mapping.json")
 fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
   .then(response => response.json())
   .then(json => {
@@ -328,8 +329,9 @@ function artySelectChange() {
   let subkey = objSub.options[objSub.selectedIndex].value;
 
   value = arty_sub_map[key][subkey]
-  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
-  updateArtyGraph(datapath);
+  filename = value
+  // datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
+  updateArtyGraph(subkey, filename);
 }
 
 function artySubSelectChange() {
@@ -340,9 +342,10 @@ function artySubSelectChange() {
   let subkey = objSub.options[objSub.selectedIndex].value;
 
   value = arty_sub_map[key][subkey]
-  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
+  filename = value
+  // datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
   // datapath = "../data_preprocessed/iartypre/" + value + ".json";
-  updateArtyGraph(datapath);
+  updateArtyGraph(subkey, filename);
 }
   
 
