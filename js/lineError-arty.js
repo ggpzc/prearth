@@ -25,8 +25,8 @@ option_arty_template = {
     
   },
   legend: {
-    // orient: 'vertical',
-    // left: 'right',
+    orient: 'vertical',
+    left: 'right',
     align: 'left',
     data: []
   },
@@ -328,7 +328,7 @@ function artySelectChange() {
   let subkey = objSub.options[objSub.selectedIndex].value;
 
   value = arty_sub_map[key][subkey]
-  datapath = "../data_preprocessed/iartypre/" + value + ".json";
+  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/iartypre/" + value + ".json";
   updateArtyGraph(datapath);
 }
 
