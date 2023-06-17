@@ -9,7 +9,7 @@ fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_i
   });
 
   // fetch("../data_preprocessed/key_mapping_ipre.json")
-  fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_iarty.json")
+  fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_ipre.json")
   .then(response => response.json())
   .then(json => {
     // copy option_template to option
