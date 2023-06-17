@@ -1,28 +1,28 @@
 {
     "性别" : {
-        "女性"  : "sex.male",
-        "男性"    : "sex.female"
+        "男性"  : "sex.male",
+        "女性"    : "sex.female"
     },
 
-    "age" : {
-        "18-44yrs"      : "age.18-44yrs",
-        "44-65yrs"      : "age.44-65yrs",
-        ">65yrs"        : "age.older_than_65yrs"
+    "年龄" : {
+        "18-44岁"      : "age.18-44yrs",
+        "44-65岁"      : "age.44-65yrs",
+        ">65岁"        : "age.older_than_65yrs"
     },
 
-    "race" : {
-        "MA"    : "race.MA",
-        "OH"    : "race.OH",
-        "NHW"   : "race.NHW",
-        "NHB"   : "race.NHB",
-        "NHS"   : "race.NHS",
-        "OR"    : "race.OR"
+    "种族和人群" : {
+        "墨西哥裔美国人"    : "race.MA",
+        "其他西班牙裔"    : "race.OH",
+        "非西班牙裔白人"   : "race.NHW",
+        "非西班牙裔黑人"   : "race.NHB",
+        "非西班牙裔亚洲人"   : "race.NHS",
+        "其他种族"    : "race.OR"
     },
 
-    "edu" : {
-        "smaller than high school"              : "edu.under_high_school",
-        "high school graduate and some college" : "edu.high_school_graduate_and_some_college",
-        "college graduate"                      : "edu.college_graduate"
+    "教育水平" : {
+        "低于高中"              : "edu.under_high_school",
+        "大学肄业" : "edu.high_school_graduate_and_some_college",
+        "大学毕业"                      : "edu.college_graduate"
     },
 
     "bmi" : {
@@ -33,35 +33,35 @@
         "bmi>=40"       : "bmi.bmi_bigger_than_40"
     },
 
-    "wai" : {
-        "wai-no"    : "wai.wai-no",
-        "wai-yes"   : "wai.wai-yes"
+    "腹部肥胖" : {
+        "无"    : "wai.wai-no",
+        "有"   : "wai.wai-yes"
     },
 
 
-    "insu" : {
-        "insu-no"   : "insu.insu-no",
-        "insu-yes"  : "insu.insu-yes"        
+    "保险情况" : {
+        "无保险"   : "insu.insu-no",
+        "有保险"  : "insu.insu-yes"        
     },
 
-    "pov" : {
-        "pov-no"   : "pov.pov-no",
-        "pov-yes"  : "pov.pov-yes"        
+    "家庭贫困情况" : {
+        "无贫困"   : "pov.pov-no",
+        "贫困"  : "pov.pov-yes"        
     }, 
 
-    "smok" : {
-        "smok-yes"      : "smok.smok-yes",
-        "smok-no"       : "smok.smok-no",
-        "smok-unknown"  : "smok.smok-unknown"
+    "抽烟情况" : {
+        "抽过烟"      : "smok.smok-yes",
+        "从不抽烟"       : "smok.smok-no",
+        "未知"  : "smok.smok-unknown"
     },
 
-    "phys" : {
-        "phys-vigorous" : "phys.phys-vigorous",
-        "phys-moderate" : "phys.phys-moderate",
-        "phys-no"       : "phys.phys-no"
+    "运动情况" : {
+        "剧烈运动" : "phys.phys-vigorous",
+        "中度运动" : "phys.phys-moderate",
+        "不运动"       : "phys.phys-no"
     },
 
-    "overall" : {
-        "overall"   : "overall.overall"
+    "总体患病率" : {
+        "总体患病率"   : "overall.overall"
     }
 }
