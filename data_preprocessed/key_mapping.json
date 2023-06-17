@@ -1,7 +1,7 @@
 {
     "sex" : {
-        "female"  : "sex.male",
-        "male"    : "sex.female"
+        "male"      : "sex.male",
+        "female"    : "sex.female"
     },
 
     "age" : {
@@ -15,12 +15,12 @@
         "OH"    : "race.OH",
         "NHW"   : "race.NHW",
         "NHB"   : "race.NHB",
-        "NHS"   : "race.NHS",
+        "NHA"   : "race.NHA",
         "OR"    : "race.OR"
     },
 
     "edu" : {
-        "smaller than high school"              : "edu.under_high_school",
+        "under than high school"                : "edu.under_high_school",
         "high school graduate and some college" : "edu.high_school_graduate_and_some_college",
         "college graduate"                      : "edu.college_graduate"
     },
