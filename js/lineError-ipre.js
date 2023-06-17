@@ -8,13 +8,13 @@ var ipre_sub_map;
 var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
 // read data from local position'../data/sex_female.json'
 
-fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
-  .then(response => response.json())
-  .then(json => {
-    // copy option_template to option
-    ipre_sub_map = json;
-    console.log(ipre_sub_map);
-  });
+// fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
+//   .then(response => response.json())
+//   .then(json => {
+//     // copy option_template to option
+//     ipre_sub_map = json;
+//     console.log(ipre_sub_map);
+//   });
 
 
 option_ipre_template = {

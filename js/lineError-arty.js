@@ -293,13 +293,13 @@ updateArtyGraph("overall","overall.overall")
 
 
 // fetch("../data_preprocessed/key_mapping.json")
-fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping.json")
-  .then(response => response.json())
-  .then(json => {
-    // copy option_template to option
-    arty_sub_map = json;
-    console.log(arty_sub_map);
-  });
+// fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_zh.json")
+//   .then(response => response.json())
+//   .then(json => {
+//     // copy option_template to option
+//     arty_sub_map = json;
+//     console.log(arty_sub_map);
+//   });
 
 
 
