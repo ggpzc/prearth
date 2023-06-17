@@ -1,0 +1,97 @@
+{
+    "sex" : {
+        "sex" : [
+            "male", 
+            "female" 
+        ]
+    },
+
+    "age" : {
+        "age" : [
+            "18-44yrs",
+            "44-65yrs",
+            ">65yrs"
+        ]
+    },
+
+    "race" : {
+        "race" : [
+            "MA",
+            "OH",
+            "NHW",
+            "NHB",
+            "NHA",
+            "OR"
+        ]
+
+    },
+
+    "edu" : {
+        "edu" : [
+            "under than high school",
+            "high school graduate and some college",
+            "college graduate"
+        ]
+
+    },
+
+    "bmi" : {
+        "bmi" : [
+            "bmi18.5-25.0",
+            "bmi25.0-30.0",
+            "bmi30.0-35.0",
+            "bmi35.0-40.0",
+            "bmi>=40"
+        ]
+
+    },
+
+    "wai" : {
+        "wai" : [
+            "wai-no",
+            "wai-yes"
+        ]
+
+    },
+
+
+    "insu" : {
+        "insu" : [
+            "insu-no",
+            "insu-yes"      
+        ]
+
+    },
+
+    "pov" : {
+        "pov" : [
+            "pov-no",
+            "pov-yes" 
+        ]
+      
+    }, 
+
+    "smok" : {
+        "smok" : [
+            "smok-yes",
+            "smok-no",
+            "smok-unknown"
+        ]
+
+    },
+
+    "phys" : {
+        "phys" : [
+            "phys-vigorous",
+            "phys-moderate",
+            "phys-no"
+        ]
+
+    },
+
+    "overall" : {
+        "overall" : [
+            "overall"
+        ]
+    }
+}

@@ -5,6 +5,7 @@ var option_ipre_template;
 
 
 var ipre_sub_map;
+var init_overall;
 var colors = ["#D89C7A", "#849B91", "#8A95A9", "#686789", "#B77F70","#88878D"]
 // read data from local position'../data/sex_female.json'
 
@@ -93,9 +94,11 @@ function updateIpreGraph(keySelect,datapath) {
     let lineCount;
 
     let raw_data = json;
-    console.log(raw_data)
+    // console.log(raw_data)
     years = raw_data.years;
-    keys = Object.keys(ipre_sub_map[keySelect]);
+    console.log(Object.keys(ipre_sub_map[keySelect]))
+    key_value = Object.keys(ipre_sub_map[keySelect])[0];
+    keys=ipre_sub_map[keySelect][key_value]
     data = raw_data.data;
     option.xAxis.data = years;
     dataCount = keys.length;
@@ -196,7 +199,7 @@ function updateIpreGraph(keySelect,datapath) {
   });
 }
 
-updateIpreGraph("overall","https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
 // updateIpreGraph("../data_preprocessed/ipre/overall.json")
 
 // sleep for 5 seconds
@@ -215,7 +218,9 @@ function ipreSelectChange() {
   let objS = document.getElementById("ipreselect");
   let value = objS.options[objS.selectedIndex].value;
   console.log(value)
-  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/" + value + ".json";
+  value_key = Object.keys(ipre_sub_map[value])[0]
+  // console.log(value)
+  datapath = "https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/" + value_key + ".json";
   // datapath = "..data_preprocessed/ipre/" + value + ".json";
   updateIpreGraph(value,datapath);
 }
