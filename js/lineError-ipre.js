@@ -199,7 +199,11 @@ function updateIpreGraph(keySelect,datapath) {
   });
 }
 
-updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+setTimeout(() => {
+  updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+}, "500");
+
+
 // updateIpreGraph("../data_preprocessed/ipre/overall.json")
 
 // sleep for 5 seconds

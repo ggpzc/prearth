@@ -276,9 +276,11 @@ function updateArtyGraph(subkey, filename) {
 
 
 
+setTimeout(() => {
+  updateArtyGraph("overall","overall.overall")
+}, "500");
 
 
-updateArtyGraph("overall","overall.overall")
 // updateArtyGraph("../data_preprocessed/iartypre/overall.overall.json")
 // sleep for 5 seconds
 
