@@ -96,6 +96,7 @@ function updateIpreGraph(keySelect,datapath) {
     let raw_data = json;
     // console.log(raw_data)
     years = raw_data.years;
+    console.log(ipre_sub_map)
     console.log(Object.keys(ipre_sub_map[keySelect]))
     key_value = Object.keys(ipre_sub_map[keySelect])[0];
     keys=ipre_sub_map[keySelect][key_value]
@@ -199,7 +200,11 @@ function updateIpreGraph(keySelect,datapath) {
   });
 }
 
-updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+// setTimeout(() => {
+//   updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+// }, "500");
+
+
 // updateIpreGraph("../data_preprocessed/ipre/overall.json")
 
 // sleep for 5 seconds

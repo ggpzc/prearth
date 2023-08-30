@@ -4,7 +4,7 @@ fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_i
   .then(json => {
     // copy option_template to option
     arty_sub_map = json;
-
+    updateArtyGraph("overall","overall.overall")
     console.log(arty_sub_map);
   });
 
@@ -15,8 +15,8 @@ fetch("https://ggpzc.github.io/prearth.github.io/data_preprocessed/key_mapping_i
   .then(json => {
     // copy option_template to option
     ipre_sub_map = json;
-
-    console.log(arty_sub_map);
+    updateIpreGraph(init_overall,"https://ggpzc.github.io/prearth.github.io/data_preprocessed/ipre/overall.json")
+    console.log(ipre_sub_map);
   });
 
 init_overall = "总体患病率"
