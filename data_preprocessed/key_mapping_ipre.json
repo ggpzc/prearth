@@ -65,8 +65,9 @@
 
     "pov" : {
         "pov" : [
-            "pov-no",
-            "pov-yes" 
+            "pov-1",
+            "pov-2",
+            "pov-3" 
         ]
       
     }, 

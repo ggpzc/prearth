@@ -45,8 +45,9 @@
     },
 
     "pov" : {
-        "pov-no"   : "pov.pov-no",
-        "pov-yes"  : "pov.pov-yes"        
+        "pov-1"   : "pov.pov-1",
+        "pov-2"  : "pov.pov-2",        
+        "pov-3"  : "pov.pov-3",        
     }, 
 
     "smok" : {
