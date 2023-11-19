@@ -57,10 +57,10 @@ option_arty_template = {
   },
   yAxis: {
     min: 0,
-    max: 100,
-    nameRotate: 45,
+    max: 30,
+    nameRotate: 20,
     // nameLocation: 'middle',
-    name: 'IARTY(%)',
+    name: 'Prevalence(%)',
     axisLabel : {
       fontSize : '18',
     },

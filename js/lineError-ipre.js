@@ -66,9 +66,9 @@ option_ipre_template = {
   yAxis: {
     min: 0,
     max: 60,
-    nameRotate: 45,
+    nameRotate: 20,
     // nameLocation: 'middle',
-    name: 'IPRE(%)',
+    name: 'Prevalence(%)',
     axisLabel : {
       fontSize : '18',
     },
