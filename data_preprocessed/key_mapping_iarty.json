@@ -1,7 +1,7 @@
 {
     "sex" : {
-        "male"      : "sex.male",
-        "female"    : "sex.female"
+        "Male"      : "sex.male",
+        "Female"    : "sex.female"
     },
 
     "age" : {
@@ -11,58 +11,58 @@
     },
 
     "race" : {
-        "MA"    : "race.MA",
-        "OH"    : "race.OH",
-        "NHW"   : "race.NHW",
-        "NHB"   : "race.NHB",
-        "NHA"   : "race.NHA",
-        "OR"    : "race.OR"
+        "Mexican Ameriacan"    : "race.MA",
+        "Other Hispanic"    : "race.OH",
+        "Non-Hispanic-White"   : "race.NHW",
+        "Non-Hispanic-Black"   : "race.NHB",
+        "Non-Hispanic-Asian"   : "race.NHA",
+        "Other Races"    : "race.OR"
     },
 
     "edu" : {
-        "under than high school"                : "edu.under_high_school",
-        "high school graduate and some college" : "edu.high_school_graduate_and_some_college",
-        "college graduate"                      : "edu.college_graduate"
+        "Under than high school"                : "edu.under_high_school",
+        "High school graduate and some college" : "edu.high_school_graduate_and_some_college",
+        "College graduate"                      : "edu.college_graduate"
     },
 
     "bmi" : {
-        "bmi18.5-25.0"  : "bmi.bmi18.5-25.0",
-        "bmi25.0-30.0"  : "bmi.bmi25.0-30.0",
-        "bmi30.0-35.0"  : "bmi.bmi30.0-35.0",
-        "bmi35.0-40.0"  : "bmi.bmi35.0-40.0",
-        "bmi>=40"       : "bmi.bmi_bigger_than_40"
+        "Normal(18.5-24.9)"  : "bmi.bmi18.5-25.0",
+        "Overweight(25.0-29.9)"  : "bmi.bmi25.0-30.0",
+        "Class 1 obesity(30.0-34.9)"  : "bmi.bmi30.0-35.0",
+        "Class 2 obesity(35.0-39.9)"  : "bmi.bmi35.0-40.0",
+        "Class 3 obesity(≥40)"       : "bmi.bmi_bigger_than_40"
     },
 
     "wai" : {
-        "wai-no"    : "wai.wai-no",
-        "wai-yes"   : "wai.wai-yes"
+        "No"    : "wai.wai-no",
+        "Yes"   : "wai.wai-yes"
     },
 
 
     "insu" : {
-        "insu-no"   : "insu.insu-no",
-        "insu-yes"  : "insu.insu-yes"        
+        "No"   : "insu.insu-no",
+        "Yes"  : "insu.insu-yes"        
     },
 
     "pov" : {
-        "pov-1"  : "pov.pov-1",
-        "pov-2"  : "pov.pov-2",        
-        "pov-3"  : "pov.pov-3"    
+        "≤1.30"  : "pov.pov-1",
+        "1.30-1.85"  : "pov.pov-2",        
+        ">1.85"  : "pov.pov-3"    
     }, 
 
     "smok" : {
-        "smok-yes"      : "smok.smok-yes",
-        "smok-no"       : "smok.smok-no",
-        "smok-unknown"  : "smok.smok-unknown"
+        "Ever-smoker"      : "smok.smok-yes",
+        "Never-smoker"       : "smok.smok-no",
+        "Unknown-smoker"  : "smok.smok-unknown"
     },
 
     "phys" : {
-        "phys-vigorous" : "phys.phys-vigorous",
-        "phys-moderate" : "phys.phys-moderate",
-        "phys-no"       : "phys.phys-no"
+        "Vigorous exercise" : "phys.phys-vigorous",
+        "Moderate exercise" : "phys.phys-moderate",
+        "No exercise"       : "phys.phys-no"
     },
 
     "overall" : {
-        "overall"   : "overall.overall"
+        "Overall"   : "overall.overall"
     }
 }
