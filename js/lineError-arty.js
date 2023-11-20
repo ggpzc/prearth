@@ -57,7 +57,7 @@ option_arty_template = {
   },
   yAxis: {
     min: 0,
-    max: 30,
+    max: 40,
     nameRotate: 20,
     // nameLocation: 'middle',
     name: 'Prevalence(%)',
